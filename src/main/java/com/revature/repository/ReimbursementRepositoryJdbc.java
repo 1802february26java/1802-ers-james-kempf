@@ -191,7 +191,45 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 
 	@Override
 	public Set<Reimbursement> selectFinalized(int employeeId) {
-		// TODO Auto-generated method stub
+		logger.trace("Select finalized reimbursement");
+		try (Connection connection = ConnectionUtil.getConnection()) {
+			int parameterIndex = 0;
+			String sql = "SELECT * FROM REIMBURSEMENT R INNER JOIN REIMBURSEMENT_STATUS RS "
+					+ "ON R.RS_ID = RS.RS_ID "
+					+ "INNER JOIN REIMBURSEMENT_TYPE RT "
+					+ "ON R.RT_ID = RT.RT_ID "
+					+ "WHERE R.EMPLOYEE_ID = ? AND R.RS_ID = ?";
+
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setInt(++parameterIndex, employeeId);
+			statement.setInt(++parameterIndex, 3);
+
+			ResultSet result = statement.executeQuery();
+			Set<Reimbursement> reimbursements = new HashSet<>();
+			
+			if (result.next()) {
+				reimbursements.add(new Reimbursement(
+						result.getInt("R_ID"),
+						result.getTimestamp("R_REQUESTED").toLocalDateTime(),
+						null,
+						result.getDouble("R_AMOUNT"),
+						result.getString("R_DESCRIPTION"),
+						EmployeeRepositoryJdbc.getInstance().select(result.getInt("EMPLOYEE_ID")),
+						EmployeeRepositoryJdbc.getInstance().select(result.getInt("MANAGER_ID")),
+						new ReimbursementStatus(
+								result.getInt("RS_ID"),
+								result.getString("RS_STATUS")
+								),
+						new ReimbursementType(
+								result.getInt("RT_ID"),
+								result.getString("RT_TYPE")
+								)
+						));
+				return reimbursements;
+			}
+		} catch (SQLException e) {
+			logger.error("Exception thrown while selecting finalized reimbursement", e);
+		}
 		return null;
 	}
 
@@ -238,5 +276,6 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 		logger.trace(repository.update(r));
 		logger.trace(repository.select(100));
 		logger.trace(repository.selectPending(100));
+		logger.trace(repository.selectFinalized(100));
 	}
 }

@@ -1000,3 +1000,43 @@ java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
 2018-03-12 16:25:26 TRACE EmployeeRepositoryJdbc:83 - Selecting employee
 2018-03-12 16:25:26 TRACE ConnectionUtil:14 - Getting connection
 2018-03-12 16:25:26 TRACE ReimbursementRepositoryJdbc:240 - [Reimbursement [id=100, requested=2018-03-12T16:25:24.883, resolved=null, amount=100.0, description=Sample, requester=Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=AE9043C9F2AD12F24C2CEEB10C6A64F0, email=NewExample@gmail.com, userRole=EmployeeRole [id=2, type=MANAGER]], approver=null, status=ReimbursementStatus [id=1, status=PENDING], type=ReimbursementType [id=1, type=OTHER]]]
+2018-03-12 16:28:24 TRACE ReimbursementRepositoryJdbc:63 - Updating reimbursement
+2018-03-12 16:28:24 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:28:25 TRACE ReimbursementRepositoryJdbc:276 - true
+2018-03-12 16:28:25 TRACE ReimbursementRepositoryJdbc:105 - Selecting reimbursement
+2018-03-12 16:28:25 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:28:25 TRACE EmployeeRepositoryJdbc:83 - Selecting employee
+2018-03-12 16:28:25 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:28:26 TRACE EmployeeRepositoryJdbc:83 - Selecting employee
+2018-03-12 16:28:26 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:28:26 TRACE ReimbursementRepositoryJdbc:277 - Reimbursement [id=100, requested=2018-03-12T16:28:24.059, resolved=null, amount=100.0, description=Sample, requester=Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=AE9043C9F2AD12F24C2CEEB10C6A64F0, email=NewExample@gmail.com, userRole=EmployeeRole [id=2, type=MANAGER]], approver=null, status=ReimbursementStatus [id=1, status=PENDING], type=ReimbursementType [id=1, type=OTHER]]
+2018-03-12 16:28:26 TRACE ReimbursementRepositoryJdbc:150 - Select pending reimbursement
+2018-03-12 16:28:26 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:28:26 TRACE EmployeeRepositoryJdbc:83 - Selecting employee
+2018-03-12 16:28:26 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:28:26 TRACE EmployeeRepositoryJdbc:83 - Selecting employee
+2018-03-12 16:28:26 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:28:26 TRACE ReimbursementRepositoryJdbc:278 - [Reimbursement [id=100, requested=2018-03-12T16:28:24.059, resolved=null, amount=100.0, description=Sample, requester=Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=AE9043C9F2AD12F24C2CEEB10C6A64F0, email=NewExample@gmail.com, userRole=EmployeeRole [id=2, type=MANAGER]], approver=null, status=ReimbursementStatus [id=1, status=PENDING], type=ReimbursementType [id=1, type=OTHER]]]
+2018-03-12 16:28:26 TRACE ReimbursementRepositoryJdbc:194 - Select pending reimbursement
+2018-03-12 16:28:26 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:28:26 TRACE ReimbursementRepositoryJdbc:279 - 
+2018-03-12 16:28:56 TRACE ReimbursementRepositoryJdbc:63 - Updating reimbursement
+2018-03-12 16:28:56 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:28:57 TRACE ReimbursementRepositoryJdbc:276 - true
+2018-03-12 16:28:57 TRACE ReimbursementRepositoryJdbc:105 - Selecting reimbursement
+2018-03-12 16:28:57 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:28:57 TRACE EmployeeRepositoryJdbc:83 - Selecting employee
+2018-03-12 16:28:57 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:28:57 TRACE EmployeeRepositoryJdbc:83 - Selecting employee
+2018-03-12 16:28:57 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:28:57 TRACE ReimbursementRepositoryJdbc:277 - Reimbursement [id=100, requested=2018-03-12T16:28:56.315, resolved=null, amount=100.0, description=Sample, requester=Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=AE9043C9F2AD12F24C2CEEB10C6A64F0, email=NewExample@gmail.com, userRole=EmployeeRole [id=2, type=MANAGER]], approver=null, status=ReimbursementStatus [id=1, status=PENDING], type=ReimbursementType [id=1, type=OTHER]]
+2018-03-12 16:28:57 TRACE ReimbursementRepositoryJdbc:150 - Select pending reimbursement
+2018-03-12 16:28:57 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:28:57 TRACE EmployeeRepositoryJdbc:83 - Selecting employee
+2018-03-12 16:28:57 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:28:57 TRACE EmployeeRepositoryJdbc:83 - Selecting employee
+2018-03-12 16:28:57 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:28:58 TRACE ReimbursementRepositoryJdbc:278 - [Reimbursement [id=100, requested=2018-03-12T16:28:56.315, resolved=null, amount=100.0, description=Sample, requester=Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=AE9043C9F2AD12F24C2CEEB10C6A64F0, email=NewExample@gmail.com, userRole=EmployeeRole [id=2, type=MANAGER]], approver=null, status=ReimbursementStatus [id=1, status=PENDING], type=ReimbursementType [id=1, type=OTHER]]]
+2018-03-12 16:28:58 TRACE ReimbursementRepositoryJdbc:194 - Select finalized reimbursement
+2018-03-12 16:28:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:28:58 TRACE ReimbursementRepositoryJdbc:279 - 
