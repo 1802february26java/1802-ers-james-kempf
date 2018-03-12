@@ -2,6 +2,7 @@ package com.revature.repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Set;
 
@@ -58,7 +59,7 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 					+ "U_EMAIL = ?, "
 					+ "UR_ID = ? "
 					+ "WHERE U_ID = ?";
-			logger.trace(sql);
+
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setString(++parameterIndex, employee.getFirstName());
 			statement.setString(++parameterIndex, employee.getLastName());
@@ -66,18 +67,47 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 			statement.setString(++parameterIndex, employee.getPassword());
 			statement.setString(++parameterIndex, employee.getEmail());
 			statement.setInt(++parameterIndex, employee.getEmployeeRole().getId());
+			
 			statement.setInt(++parameterIndex, employee.getId());
 
 			return (statement.executeUpdate() > 0);
 		} catch (SQLException e) {
-			logger.error("Exception thrown while updating new employee", e);
+			logger.error("Exception thrown while updating employee", e);
 		}
 		return false;
 	}
 
 	@Override
 	public Employee select(int employeeId) {
-		// TODO Auto-generated method stub
+		logger.trace("Selecting employee");
+		try (Connection connection = ConnectionUtil.getConnection()) {
+			int parameterIndex = 0;
+			String sql = "SELECT * FROM USER_T INNER JOIN USER_ROLE "
+					+ "ON USER_T.UR_ID = USER_ROLE.UR_ID "
+					+ "WHERE U_ID = ?";
+			
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setInt(++parameterIndex, employeeId);
+
+			ResultSet result = statement.executeQuery();
+			
+			if (result.next()) {
+				return new Employee(
+						result.getInt("U_ID"),
+						result.getString("U_FIRSTNAME"),
+						result.getString("U_LASTNAME"),
+						result.getString("U_USERNAME"),
+						result.getString("U_PASSWORD"),
+						result.getString("U_EMAIL"),
+						new EmployeeRole(
+								result.getInt("UR_ID"),
+								result.getString("UR_TYPE")
+								)
+						);
+			}
+		} catch (SQLException e) {
+			logger.error("Exception thrown while selecting employee", e);
+		}
 		return null;
 	}
 
@@ -124,6 +154,6 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 		repository.insert(e);
 		e.setEmail("NewExample@gmail.com");
 		repository.update(e);
-		
+		logger.trace(repository.select(100).toString());
 	}
 }
