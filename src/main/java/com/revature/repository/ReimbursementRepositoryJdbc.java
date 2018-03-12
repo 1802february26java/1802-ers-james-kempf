@@ -147,7 +147,7 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 
 	@Override
 	public Set<Reimbursement> selectPending(int employeeId) {
-		logger.trace("Select pending reimbursement");
+		logger.trace("Selecting pending reimbursement");
 		try (Connection connection = ConnectionUtil.getConnection()) {
 			int parameterIndex = 0;
 			String sql = "SELECT * FROM REIMBURSEMENT R INNER JOIN REIMBURSEMENT_STATUS RS "
@@ -163,7 +163,7 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 			ResultSet result = statement.executeQuery();
 			Set<Reimbursement> reimbursements = new HashSet<>();
 			
-			if (result.next()) {
+			while (result.next()) {
 				reimbursements.add(new Reimbursement(
 						result.getInt("R_ID"),
 						result.getTimestamp("R_REQUESTED").toLocalDateTime(),
@@ -181,8 +181,9 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 								result.getString("RT_TYPE")
 								)
 						));
-				return reimbursements;
 			}
+			return reimbursements;
+
 		} catch (SQLException e) {
 			logger.error("Exception thrown while selecting pending reimbursement", e);
 		}
@@ -191,23 +192,24 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 
 	@Override
 	public Set<Reimbursement> selectFinalized(int employeeId) {
-		logger.trace("Select finalized reimbursement");
+		logger.trace("Selecting finalized reimbursement");
 		try (Connection connection = ConnectionUtil.getConnection()) {
 			int parameterIndex = 0;
 			String sql = "SELECT * FROM REIMBURSEMENT R INNER JOIN REIMBURSEMENT_STATUS RS "
 					+ "ON R.RS_ID = RS.RS_ID "
 					+ "INNER JOIN REIMBURSEMENT_TYPE RT "
 					+ "ON R.RT_ID = RT.RT_ID "
-					+ "WHERE R.EMPLOYEE_ID = ? AND R.RS_ID = ?";
+					+ "WHERE R.EMPLOYEE_ID = ? AND (R.RS_ID = ? OR R.RS_ID = ?)";
 
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setInt(++parameterIndex, employeeId);
+			statement.setInt(++parameterIndex, 2);
 			statement.setInt(++parameterIndex, 3);
 
 			ResultSet result = statement.executeQuery();
 			Set<Reimbursement> reimbursements = new HashSet<>();
 			
-			if (result.next()) {
+			while (result.next()) {
 				reimbursements.add(new Reimbursement(
 						result.getInt("R_ID"),
 						result.getTimestamp("R_REQUESTED").toLocalDateTime(),
@@ -225,8 +227,8 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 								result.getString("RT_TYPE")
 								)
 						));
-				return reimbursements;
 			}
+			return reimbursements;
 		} catch (SQLException e) {
 			logger.error("Exception thrown while selecting finalized reimbursement", e);
 		}
@@ -235,19 +237,112 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 
 	@Override
 	public Set<Reimbursement> selectAllPending() {
-		// TODO Auto-generated method stub
+		logger.trace("Selecting all pending reimbursement");
+		try (Connection connection = ConnectionUtil.getConnection()) {
+			int parameterIndex = 0;
+			String sql = "SELECT * FROM REIMBURSEMENT R INNER JOIN REIMBURSEMENT_STATUS RS "
+					+ "ON R.RS_ID = RS.RS_ID "
+					+ "INNER JOIN REIMBURSEMENT_TYPE RT "
+					+ "ON R.RT_ID = RT.RT_ID "
+					+ "WHERE R.RS_ID = ?";
+
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setInt(++parameterIndex, 1);
+
+			ResultSet result = statement.executeQuery();
+			Set<Reimbursement> reimbursements = new HashSet<>();
+			
+			while (result.next()) {
+				reimbursements.add(new Reimbursement(
+						result.getInt("R_ID"),
+						result.getTimestamp("R_REQUESTED").toLocalDateTime(),
+						null,
+						result.getDouble("R_AMOUNT"),
+						result.getString("R_DESCRIPTION"),
+						EmployeeRepositoryJdbc.getInstance().select(result.getInt("EMPLOYEE_ID")),
+						EmployeeRepositoryJdbc.getInstance().select(result.getInt("MANAGER_ID")),
+						new ReimbursementStatus(
+								result.getInt("RS_ID"),
+								result.getString("RS_STATUS")
+								),
+						new ReimbursementType(
+								result.getInt("RT_ID"),
+								result.getString("RT_TYPE")
+								)
+						));
+			}
+			return reimbursements;
+		} catch (SQLException e) {
+			logger.error("Exception thrown while selecting pending reimbursement", e);
+		}
 		return null;
 	}
 
 	@Override
 	public Set<Reimbursement> selectAllFinalized() {
-		// TODO Auto-generated method stub
+		logger.trace("Selecting all finalized reimbursement");
+		try (Connection connection = ConnectionUtil.getConnection()) {
+			int parameterIndex = 0;
+			String sql = "SELECT * FROM REIMBURSEMENT R INNER JOIN REIMBURSEMENT_STATUS RS "
+					+ "ON R.RS_ID = RS.RS_ID "
+					+ "INNER JOIN REIMBURSEMENT_TYPE RT "
+					+ "ON R.RT_ID = RT.RT_ID "
+					+ "WHERE R.RS_ID = ? OR R.RS_ID = ?";
+
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setInt(++parameterIndex, 2);
+			statement.setInt(++parameterIndex, 3);
+
+			ResultSet result = statement.executeQuery();
+			Set<Reimbursement> reimbursements = new HashSet<>();
+			
+			while (result.next()) {
+				reimbursements.add(new Reimbursement(
+						result.getInt("R_ID"),
+						result.getTimestamp("R_REQUESTED").toLocalDateTime(),
+						null,
+						result.getDouble("R_AMOUNT"),
+						result.getString("R_DESCRIPTION"),
+						EmployeeRepositoryJdbc.getInstance().select(result.getInt("EMPLOYEE_ID")),
+						EmployeeRepositoryJdbc.getInstance().select(result.getInt("MANAGER_ID")),
+						new ReimbursementStatus(
+								result.getInt("RS_ID"),
+								result.getString("RS_STATUS")
+								),
+						new ReimbursementType(
+								result.getInt("RT_ID"),
+								result.getString("RT_TYPE")
+								)
+						));
+			}
+			return reimbursements;
+		} catch (SQLException e) {
+			logger.error("Exception thrown while selecting finalized reimbursement", e);
+		}
 		return null;
 	}
 
 	@Override
 	public Set<ReimbursementType> selectTypes() {
-		// TODO Auto-generated method stub
+		logger.trace("Selecting types");
+		try (Connection connection = ConnectionUtil.getConnection()) {
+			String sql = "SELECT * FROM REIMBURSEMENT_TYPE";
+
+			PreparedStatement statement = connection.prepareStatement(sql);
+
+			ResultSet result = statement.executeQuery();
+			Set<ReimbursementType> types = new HashSet<>();
+			
+			while (result.next()) {
+				types.add(new ReimbursementType(
+						result.getInt("RT_ID"),
+						result.getString("RT_TYPE")
+						));
+			}
+			return types;
+		} catch (SQLException e) {
+			logger.error("Exception thrown while selecting types", e);
+		}
 		return null;
 	}
 
@@ -277,5 +372,9 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 		logger.trace(repository.select(100));
 		logger.trace(repository.selectPending(100));
 		logger.trace(repository.selectFinalized(100));
+		logger.trace(repository.selectAllPending());
+		logger.trace(repository.selectAllFinalized());
+		logger.trace(repository.selectTypes());
+
 	}
 }
