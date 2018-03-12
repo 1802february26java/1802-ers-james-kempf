@@ -1,7 +1,6 @@
 package com.revature.repository;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -283,6 +282,7 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 		EmployeeRole er = new EmployeeRole(1, "EMPLOYEE");
 		Employee e = new Employee(100,"James","Kempf","jamesk4321","password1","example@gmail.com",er);
 		EmployeeRepositoryJdbc repository = EmployeeRepositoryJdbc.getInstance();
+		
 //		logger.trace(repository.insert(e));
 		e.setEmail("NewExample@gmail.com");
 		logger.trace(repository.update(e));
@@ -290,7 +290,10 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 		logger.trace(repository.select("jamesk4321").toString());
 		logger.trace(repository.selectAll());
 		logger.trace(repository.getPasswordHash(e));
-		EmployeeToken et = new EmployeeToken(100, "token", LocalDateTime.now(), e);
+		
+		EmployeeToken et = new EmployeeToken(100, null, LocalDateTime.now(), e);
+		String token = et.getRequester().getUsername() + Timestamp.valueOf(et.getCreationDate());
+		et.setToken(Integer.toString(token.hashCode()));
 		logger.trace(repository.insertEmployeeToken(et));
 		logger.trace(repository.selectEmployeeToken(et));
 		logger.trace(repository.deleteEmployeeToken(et));

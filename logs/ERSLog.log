@@ -718,3 +718,115 @@ java.sql.SQLSyntaxErrorException: ORA-00904: "PASSWORD_RECOVER"."U_ID": invalid 
 2018-03-12 13:51:12 TRACE EmployeeRepositoryJdbc:226 - Deleting employee token
 2018-03-12 13:51:12 TRACE ConnectionUtil:14 - Getting connection
 2018-03-12 13:51:12 TRACE EmployeeRepositoryJdbc:296 - true
+2018-03-12 13:59:37 TRACE EmployeeRepositoryJdbc:206 - Inserting new employee token
+2018-03-12 13:59:37 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 13:59:38 TRACE EmployeeRepositoryJdbc:300 - true
+2018-03-12 13:59:38 TRACE EmployeeRepositoryJdbc:249 - Selecting employee token
+2018-03-12 13:59:38 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 13:59:38 TRACE EmployeeRepositoryJdbc:301 - EmployeeToken [id=100, token=token, creationDate=2018-03-12T13:59:37.869, requester=Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=AE9043C9F2AD12F24C2CEEB10C6A64F0, email=NewExample@gmail.com, userRole=EmployeeRole [id=1, type=EMPLOYEE]]]
+2018-03-12 13:59:38 TRACE EmployeeRepositoryJdbc:232 - Deleting employee token
+2018-03-12 13:59:38 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 13:59:39 TRACE EmployeeRepositoryJdbc:302 - true
+2018-03-12 14:01:01 TRACE EmployeeRepositoryJdbc:206 - Inserting new employee token
+2018-03-12 14:01:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 14:01:02 TRACE EmployeeRepositoryJdbc:300 - true
+2018-03-12 14:01:02 TRACE EmployeeRepositoryJdbc:243 - Selecting employee token
+2018-03-12 14:01:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 14:01:03 TRACE EmployeeRepositoryJdbc:301 - EmployeeToken [id=100, token=jamesk43212018-03-12 14:01:01.373, creationDate=2018-03-12T14:01:01.373, requester=Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=AE9043C9F2AD12F24C2CEEB10C6A64F0, email=NewExample@gmail.com, userRole=EmployeeRole [id=1, type=EMPLOYEE]]]
+2018-03-12 14:01:03 TRACE EmployeeRepositoryJdbc:226 - Deleting employee token
+2018-03-12 14:01:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 14:01:03 TRACE EmployeeRepositoryJdbc:302 - true
+2018-03-12 14:01:33 TRACE EmployeeRepositoryJdbc:206 - Inserting new employee token
+2018-03-12 14:01:33 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 14:01:34 TRACE EmployeeRepositoryJdbc:300 - true
+2018-03-12 14:01:34 TRACE EmployeeRepositoryJdbc:243 - Selecting employee token
+2018-03-12 14:01:34 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 14:01:34 TRACE EmployeeRepositoryJdbc:301 - EmployeeToken [id=100, token=-1887527980, creationDate=2018-03-12T14:01:33.791, requester=Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=AE9043C9F2AD12F24C2CEEB10C6A64F0, email=NewExample@gmail.com, userRole=EmployeeRole [id=1, type=EMPLOYEE]]]
+2018-03-12 14:01:34 TRACE EmployeeRepositoryJdbc:226 - Deleting employee token
+2018-03-12 14:01:34 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 14:01:35 TRACE EmployeeRepositoryJdbc:302 - true
+2018-03-12 14:04:07 TRACE EmployeeRepositoryJdbc:206 - Inserting new employee token
+2018-03-12 14:04:07 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 14:04:08 TRACE EmployeeRepositoryJdbc:296 - true
+2018-03-12 14:04:08 TRACE EmployeeRepositoryJdbc:243 - Selecting employee token
+2018-03-12 14:04:08 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 14:04:08 TRACE EmployeeRepositoryJdbc:297 - EmployeeToken [id=100, token=-1511916467, creationDate=2018-03-12T14:04:07.410, requester=Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=AE9043C9F2AD12F24C2CEEB10C6A64F0, email=NewExample@gmail.com, userRole=EmployeeRole [id=1, type=EMPLOYEE]]]
+2018-03-12 14:04:08 TRACE EmployeeRepositoryJdbc:226 - Deleting employee token
+2018-03-12 14:04:08 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 14:04:08 TRACE EmployeeRepositoryJdbc:298 - true
+2018-03-12 14:04:15 TRACE EmployeeRepositoryJdbc:206 - Inserting new employee token
+2018-03-12 14:04:15 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 14:04:15 TRACE EmployeeRepositoryJdbc:296 - true
+2018-03-12 14:04:15 TRACE EmployeeRepositoryJdbc:243 - Selecting employee token
+2018-03-12 14:04:15 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 14:04:16 TRACE EmployeeRepositoryJdbc:297 - EmployeeToken [id=100, token=-1511052616, creationDate=2018-03-12T14:04:15.160, requester=Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=AE9043C9F2AD12F24C2CEEB10C6A64F0, email=NewExample@gmail.com, userRole=EmployeeRole [id=1, type=EMPLOYEE]]]
+2018-03-12 14:04:16 TRACE EmployeeRepositoryJdbc:226 - Deleting employee token
+2018-03-12 14:04:16 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 14:04:16 TRACE EmployeeRepositoryJdbc:298 - true
+2018-03-12 14:32:42 TRACE ReimbursementRepositoryJdbc:31 - Inserting new reimbursement
+2018-03-12 14:32:42 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 14:32:43 ERROR ReimbursementRepositoryJdbc:67 - Exception thrown while inserting new reimbursement
+java.sql.SQLException: Missing IN or OUT parameter at index:: 8
+	at oracle.jdbc.driver.OraclePreparedStatement.processCompletedBindRow(OraclePreparedStatement.java:1878)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3815)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.ReimbursementRepositoryJdbc.insert(ReimbursementRepositoryJdbc.java:65)
+	at com.revature.repository.ReimbursementRepositoryJdbc.main(ReimbursementRepositoryJdbc.java:121)
+2018-03-12 14:32:43 TRACE ReimbursementRepositoryJdbc:121 - false
+2018-03-12 14:36:22 TRACE ReimbursementRepositoryJdbc:31 - Inserting new reimbursement
+2018-03-12 14:36:22 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 14:36:24 ERROR ReimbursementRepositoryJdbc:67 - Exception thrown while inserting new reimbursement
+java.sql.SQLException: Missing IN or OUT parameter at index:: 8
+	at oracle.jdbc.driver.OraclePreparedStatement.processCompletedBindRow(OraclePreparedStatement.java:1878)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3815)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.ReimbursementRepositoryJdbc.insert(ReimbursementRepositoryJdbc.java:65)
+	at com.revature.repository.ReimbursementRepositoryJdbc.main(ReimbursementRepositoryJdbc.java:121)
+2018-03-12 14:36:24 TRACE ReimbursementRepositoryJdbc:121 - false
+2018-03-12 14:37:53 TRACE ReimbursementRepositoryJdbc:31 - Inserting new reimbursement
+2018-03-12 14:37:53 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 14:37:55 ERROR ReimbursementRepositoryJdbc:67 - Exception thrown while inserting new reimbursement
+java.sql.SQLSyntaxErrorException: ORA-00904: "RT_ID": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.ReimbursementRepositoryJdbc.insert(ReimbursementRepositoryJdbc.java:65)
+	at com.revature.repository.ReimbursementRepositoryJdbc.main(ReimbursementRepositoryJdbc.java:121)
+2018-03-12 14:37:55 TRACE ReimbursementRepositoryJdbc:121 - false
+2018-03-12 14:40:35 TRACE ReimbursementRepositoryJdbc:31 - Inserting new reimbursement
+2018-03-12 14:40:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 14:40:36 ERROR ReimbursementRepositoryJdbc:67 - Exception thrown while inserting new reimbursement
+java.sql.SQLSyntaxErrorException: ORA-00904: "RT_ID": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.ReimbursementRepositoryJdbc.insert(ReimbursementRepositoryJdbc.java:65)
+	at com.revature.repository.ReimbursementRepositoryJdbc.main(ReimbursementRepositoryJdbc.java:122)
+2018-03-12 14:40:36 TRACE ReimbursementRepositoryJdbc:122 - false
+2018-03-12 14:53:38 TRACE ReimbursementRepositoryJdbc:31 - Inserting new reimbursement
+2018-03-12 14:53:38 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 14:53:40 TRACE ReimbursementRepositoryJdbc:122 - true
