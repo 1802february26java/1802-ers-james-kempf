@@ -240,22 +240,59 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 
 	@Override
 	public EmployeeToken selectEmployeeToken(EmployeeToken employeeToken) {
+		logger.trace("Selecting employee token");
+		try (Connection connection = ConnectionUtil.getConnection()) {
+			int parameterIndex = 0;
+			String sql = "SELECT * FROM PASSWORD_RECOVERY INNER JOIN USER_T "
+					+ "ON PASSWORD_RECOVERY.U_ID = USER_T.U_ID "
+					+ "INNER JOIN USER_ROLE "
+					+ "ON USER_T.UR_ID = USER_ROLE.UR_ID "
+					+ "WHERE PR_ID = ?";
+			
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setInt(++parameterIndex, employeeToken.getId());
+
+			ResultSet result = statement.executeQuery();
+			
+			if (result.next()) {
+				return new EmployeeToken(
+						result.getInt("PR_ID"),
+						result.getString("PR_TOKEN"),
+						result.getTimestamp("PR_TIME").toLocalDateTime(),
+						new Employee(
+								result.getInt("U_ID"),
+								result.getString("U_FIRSTNAME"),
+								result.getString("U_LASTNAME"),
+								result.getString("U_USERNAME"),
+								result.getString("U_PASSWORD"),
+								result.getString("U_EMAIL"),
+								new EmployeeRole(
+										result.getInt("UR_ID"),
+										result.getString("UR_TYPE")
+										)
+								)
+						);
+			}
+		} catch (SQLException e) {
+			logger.error("Exception thrown while selecting employee token", e);
+		}
 		return null;
 	}
 	
 	public static void main(String[] args) {
-		EmployeeRole er = new EmployeeRole(1,"Temp");
+		EmployeeRole er = new EmployeeRole(1, "EMPLOYEE");
 		Employee e = new Employee(100,"James","Kempf","jamesk4321","password1","example@gmail.com",er);
 		EmployeeRepositoryJdbc repository = EmployeeRepositoryJdbc.getInstance();
 //		logger.trace(repository.insert(e));
-//		e.setEmail("NewExample@gmail.com");
-//		logger.trace(repository.update(e));
-//		logger.trace(repository.select(100).toString());
-//		logger.trace(repository.select("jamesk4321").toString());
-//		logger.trace(repository.selectAll());
-//		logger.trace(repository.getPasswordHash(e));
+		e.setEmail("NewExample@gmail.com");
+		logger.trace(repository.update(e));
+		logger.trace(repository.select(100).toString());
+		logger.trace(repository.select("jamesk4321").toString());
+		logger.trace(repository.selectAll());
+		logger.trace(repository.getPasswordHash(e));
 		EmployeeToken et = new EmployeeToken(100, "token", LocalDateTime.now(), e);
 		logger.trace(repository.insertEmployeeToken(et));
+		logger.trace(repository.selectEmployeeToken(et));
 		logger.trace(repository.deleteEmployeeToken(et));
 	}
 }
