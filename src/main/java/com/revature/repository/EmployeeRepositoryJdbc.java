@@ -146,7 +146,7 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 
 	@Override
 	public Set<Employee> selectAll() {
-		logger.trace("Selecting employee");
+		logger.trace("Selecting all employees");
 		try (Connection connection = ConnectionUtil.getConnection()) {
 			String sql = "SELECT * FROM USER_T INNER JOIN USER_ROLE "
 					+ "ON USER_T.UR_ID = USER_ROLE.UR_ID";
@@ -172,14 +172,29 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 			}
 			return employees;
 		} catch (SQLException e) {
-			logger.error("Exception thrown while selecting employee", e);
+			logger.error("Exception thrown while selecting all employees", e);
 		}
 		return null;
 	}
 
 	@Override
 	public String getPasswordHash(Employee employee) {
-		// TODO Auto-generated method stub
+		logger.trace("Getting password hash");
+		try (Connection connection = ConnectionUtil.getConnection()) {
+			int parameterIndex = 0;
+			String sql = "SELECT U_PASSWORD FROM USER_T WHERE U_ID = ?";
+			
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setInt(++parameterIndex, employee.getId());
+
+			ResultSet result = statement.executeQuery();
+			
+			if (result.next()) {
+				return result.getString("U_PASSWORD");
+			}
+		} catch (SQLException e) {
+			logger.error("Exception thrown while getting password hash", e);
+		}
 		return null;
 	}
 
@@ -211,5 +226,6 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 		logger.trace(repository.select(100).toString());
 		logger.trace(repository.select("jamesk4321").toString());
 		logger.trace(repository.selectAll());
+		logger.trace(repository.getPasswordHash(e));
 	}
 }
