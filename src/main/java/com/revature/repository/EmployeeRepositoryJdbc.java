@@ -1,9 +1,12 @@
 package com.revature.repository;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -200,7 +203,21 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 
 	@Override
 	public boolean insertEmployeeToken(EmployeeToken employeeToken) {
-		// TODO Auto-generated method stub
+		logger.trace("Inserting new employee token");
+		try (Connection connection = ConnectionUtil.getConnection()) {
+			int parameterIndex = 0;
+			String sql = "INSERT INTO PASSWORD_RECOVERY VALUES(?,?,?,?)";
+			
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setInt(++parameterIndex, employeeToken.getId());
+			statement.setString(++parameterIndex, employeeToken.getToken());
+			statement.setTimestamp(++parameterIndex, Timestamp.valueOf(employeeToken.getCreationDate()));
+			statement.setInt(++parameterIndex, employeeToken.getRequester().getId());
+
+			return (statement.executeUpdate() > 0);
+		} catch (SQLException e) {
+			logger.error("Exception thrown while inserting new employee token", e);
+		}
 		return false;
 	}
 
@@ -220,12 +237,14 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 		EmployeeRole er = new EmployeeRole(1,"Temp");
 		Employee e = new Employee(100,"James","Kempf","jamesk4321","password1","example@gmail.com",er);
 		EmployeeRepositoryJdbc repository = EmployeeRepositoryJdbc.getInstance();
-		repository.insert(e);
+		logger.trace(repository.insert(e));
 		e.setEmail("NewExample@gmail.com");
-		repository.update(e);
+		logger.trace(repository.update(e));
 		logger.trace(repository.select(100).toString());
 		logger.trace(repository.select("jamesk4321").toString());
 		logger.trace(repository.selectAll());
 		logger.trace(repository.getPasswordHash(e));
+		EmployeeToken et = new EmployeeToken(100, "token", LocalDateTime.now(), e);
+		logger.trace(repository.insertEmployeeToken(et));
 	}
 }
