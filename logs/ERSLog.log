@@ -919,3 +919,84 @@ java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
 2018-03-12 15:55:55 TRACE EmployeeRepositoryJdbc:83 - Selecting employee
 2018-03-12 15:55:55 TRACE ConnectionUtil:14 - Getting connection
 2018-03-12 15:55:55 TRACE ReimbursementRepositoryJdbc:220 - Reimbursement [id=100, requested=2018-03-12T15:55:53.160, resolved=null, amount=100.0, description=Sample, requester=Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=AE9043C9F2AD12F24C2CEEB10C6A64F0, email=NewExample@gmail.com, userRole=EmployeeRole [id=2, type=MANAGER]], approver=null, status=ReimbursementStatus [id=1, status=PENDING], type=ReimbursementType [id=1, type=OTHER]]
+2018-03-12 16:22:00 TRACE ReimbursementRepositoryJdbc:63 - Updating reimbursement
+2018-03-12 16:22:00 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:22:01 TRACE ReimbursementRepositoryJdbc:236 - true
+2018-03-12 16:22:01 TRACE ReimbursementRepositoryJdbc:105 - Selecting reimbursement
+2018-03-12 16:22:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:22:02 TRACE EmployeeRepositoryJdbc:83 - Selecting employee
+2018-03-12 16:22:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:22:02 TRACE EmployeeRepositoryJdbc:83 - Selecting employee
+2018-03-12 16:22:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:22:02 TRACE ReimbursementRepositoryJdbc:237 - Reimbursement [id=100, requested=2018-03-12T16:22:00.671, resolved=null, amount=100.0, description=Sample, requester=Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=AE9043C9F2AD12F24C2CEEB10C6A64F0, email=NewExample@gmail.com, userRole=EmployeeRole [id=2, type=MANAGER]], approver=null, status=ReimbursementStatus [id=1, status=PENDING], type=ReimbursementType [id=1, type=OTHER]]
+2018-03-12 16:22:02 TRACE ReimbursementRepositoryJdbc:150 - Select pending reimbursement
+2018-03-12 16:22:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:22:02 ERROR ReimbursementRepositoryJdbc:185 - Exception thrown while selecting pending reimbursement
+java.sql.SQLSyntaxErrorException: ORA-00933: SQL command not properly ended
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3867)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1502)
+	at com.revature.repository.ReimbursementRepositoryJdbc.selectPending(ReimbursementRepositoryJdbc.java:161)
+	at com.revature.repository.ReimbursementRepositoryJdbc.main(ReimbursementRepositoryJdbc.java:238)
+2018-03-12 16:22:02 TRACE ReimbursementRepositoryJdbc:238 - 
+2018-03-12 16:25:12 TRACE ReimbursementRepositoryJdbc:63 - Updating reimbursement
+2018-03-12 16:25:12 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:25:13 TRACE ReimbursementRepositoryJdbc:238 - true
+2018-03-12 16:25:13 TRACE ReimbursementRepositoryJdbc:105 - Selecting reimbursement
+2018-03-12 16:25:13 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:25:13 TRACE EmployeeRepositoryJdbc:83 - Selecting employee
+2018-03-12 16:25:13 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:25:13 TRACE EmployeeRepositoryJdbc:83 - Selecting employee
+2018-03-12 16:25:13 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:25:13 TRACE ReimbursementRepositoryJdbc:239 - Reimbursement [id=100, requested=2018-03-12T16:25:12.184, resolved=null, amount=100.0, description=Sample, requester=Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=AE9043C9F2AD12F24C2CEEB10C6A64F0, email=NewExample@gmail.com, userRole=EmployeeRole [id=2, type=MANAGER]], approver=null, status=ReimbursementStatus [id=1, status=PENDING], type=ReimbursementType [id=1, type=OTHER]]
+2018-03-12 16:25:13 TRACE ReimbursementRepositoryJdbc:150 - Select pending reimbursement
+2018-03-12 16:25:13 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:25:13 ERROR ReimbursementRepositoryJdbc:187 - Exception thrown while selecting pending reimbursement
+java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3867)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1502)
+	at com.revature.repository.ReimbursementRepositoryJdbc.selectPending(ReimbursementRepositoryJdbc.java:163)
+	at com.revature.repository.ReimbursementRepositoryJdbc.main(ReimbursementRepositoryJdbc.java:240)
+2018-03-12 16:25:13 TRACE ReimbursementRepositoryJdbc:240 - 
+2018-03-12 16:25:24 TRACE ReimbursementRepositoryJdbc:63 - Updating reimbursement
+2018-03-12 16:25:24 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:25:25 TRACE ReimbursementRepositoryJdbc:238 - true
+2018-03-12 16:25:25 TRACE ReimbursementRepositoryJdbc:105 - Selecting reimbursement
+2018-03-12 16:25:25 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:25:25 TRACE EmployeeRepositoryJdbc:83 - Selecting employee
+2018-03-12 16:25:25 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:25:25 TRACE EmployeeRepositoryJdbc:83 - Selecting employee
+2018-03-12 16:25:25 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:25:26 TRACE ReimbursementRepositoryJdbc:239 - Reimbursement [id=100, requested=2018-03-12T16:25:24.883, resolved=null, amount=100.0, description=Sample, requester=Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=AE9043C9F2AD12F24C2CEEB10C6A64F0, email=NewExample@gmail.com, userRole=EmployeeRole [id=2, type=MANAGER]], approver=null, status=ReimbursementStatus [id=1, status=PENDING], type=ReimbursementType [id=1, type=OTHER]]
+2018-03-12 16:25:26 TRACE ReimbursementRepositoryJdbc:150 - Select pending reimbursement
+2018-03-12 16:25:26 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:25:26 TRACE EmployeeRepositoryJdbc:83 - Selecting employee
+2018-03-12 16:25:26 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:25:26 TRACE EmployeeRepositoryJdbc:83 - Selecting employee
+2018-03-12 16:25:26 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 16:25:26 TRACE ReimbursementRepositoryJdbc:240 - [Reimbursement [id=100, requested=2018-03-12T16:25:24.883, resolved=null, amount=100.0, description=Sample, requester=Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=AE9043C9F2AD12F24C2CEEB10C6A64F0, email=NewExample@gmail.com, userRole=EmployeeRole [id=2, type=MANAGER]], approver=null, status=ReimbursementStatus [id=1, status=PENDING], type=ReimbursementType [id=1, type=OTHER]]]
