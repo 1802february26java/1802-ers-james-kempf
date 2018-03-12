@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashSet;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
@@ -55,7 +56,6 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 					+ "U_FIRSTNAME = ?, "
 					+ "U_LASTNAME = ?, "
 					+ "U_USERNAME = ?, "
-					+ "U_PASSWORD = ?, "
 					+ "U_EMAIL = ?, "
 					+ "UR_ID = ? "
 					+ "WHERE U_ID = ?";
@@ -64,7 +64,6 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 			statement.setString(++parameterIndex, employee.getFirstName());
 			statement.setString(++parameterIndex, employee.getLastName());
 			statement.setString(++parameterIndex, employee.getUsername());
-			statement.setString(++parameterIndex, employee.getPassword());
 			statement.setString(++parameterIndex, employee.getEmail());
 			statement.setInt(++parameterIndex, employee.getEmployeeRole().getId());
 			
@@ -147,7 +146,34 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 
 	@Override
 	public Set<Employee> selectAll() {
-		// TODO Auto-generated method stub
+		logger.trace("Selecting employee");
+		try (Connection connection = ConnectionUtil.getConnection()) {
+			String sql = "SELECT * FROM USER_T INNER JOIN USER_ROLE "
+					+ "ON USER_T.UR_ID = USER_ROLE.UR_ID";
+			
+			PreparedStatement statement = connection.prepareStatement(sql);
+
+			ResultSet result = statement.executeQuery();
+			Set<Employee> employees = new HashSet<>();
+			
+			while (result.next()) {
+				employees.add(new Employee(
+						result.getInt("U_ID"),
+						result.getString("U_FIRSTNAME"),
+						result.getString("U_LASTNAME"),
+						result.getString("U_USERNAME"),
+						result.getString("U_PASSWORD"),
+						result.getString("U_EMAIL"),
+						new EmployeeRole(
+								result.getInt("UR_ID"),
+								result.getString("UR_TYPE")
+								)
+						));
+			}
+			return employees;
+		} catch (SQLException e) {
+			logger.error("Exception thrown while selecting employee", e);
+		}
 		return null;
 	}
 
@@ -184,5 +210,6 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 		repository.update(e);
 		logger.trace(repository.select(100).toString());
 		logger.trace(repository.select("jamesk4321").toString());
+		logger.trace(repository.selectAll());
 	}
 }
