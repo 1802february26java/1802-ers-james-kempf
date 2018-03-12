@@ -223,13 +223,23 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 
 	@Override
 	public boolean deleteEmployeeToken(EmployeeToken employeeToken) {
-		// TODO Auto-generated method stub
+		logger.trace("Deleting employee token");
+		try (Connection connection = ConnectionUtil.getConnection()) {
+			int parameterIndex = 0;
+			String sql = "DELETE FROM PASSWORD_RECOVERY WHERE PR_ID = ?";
+			
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setInt(++parameterIndex, employeeToken.getId());
+
+			return (statement.executeUpdate() > 0);
+		} catch (SQLException e) {
+			logger.error("Exception thrown while deleting employee token", e);
+		}
 		return false;
 	}
 
 	@Override
 	public EmployeeToken selectEmployeeToken(EmployeeToken employeeToken) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 	
@@ -237,14 +247,15 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 		EmployeeRole er = new EmployeeRole(1,"Temp");
 		Employee e = new Employee(100,"James","Kempf","jamesk4321","password1","example@gmail.com",er);
 		EmployeeRepositoryJdbc repository = EmployeeRepositoryJdbc.getInstance();
-		logger.trace(repository.insert(e));
-		e.setEmail("NewExample@gmail.com");
-		logger.trace(repository.update(e));
-		logger.trace(repository.select(100).toString());
-		logger.trace(repository.select("jamesk4321").toString());
-		logger.trace(repository.selectAll());
-		logger.trace(repository.getPasswordHash(e));
+//		logger.trace(repository.insert(e));
+//		e.setEmail("NewExample@gmail.com");
+//		logger.trace(repository.update(e));
+//		logger.trace(repository.select(100).toString());
+//		logger.trace(repository.select("jamesk4321").toString());
+//		logger.trace(repository.selectAll());
+//		logger.trace(repository.getPasswordHash(e));
 		EmployeeToken et = new EmployeeToken(100, "token", LocalDateTime.now(), e);
 		logger.trace(repository.insertEmployeeToken(et));
+		logger.trace(repository.deleteEmployeeToken(et));
 	}
 }

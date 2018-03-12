@@ -567,3 +567,84 @@ java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint 
 2018-03-12 13:33:49 TRACE EmployeeRepositoryJdbc:206 - Inserting new employee token
 2018-03-12 13:33:49 TRACE ConnectionUtil:14 - Getting connection
 2018-03-12 13:33:49 TRACE EmployeeRepositoryJdbc:248 - true
+2018-03-12 13:38:06 TRACE EmployeeRepositoryJdbc:32 - Inserting new employee
+2018-03-12 13:38:06 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 13:38:09 ERROR EmployeeRepositoryJdbc:48 - Exception thrown while inserting new employee
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (REIMBURSEMENT_DB.PK_USER) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.insert(EmployeeRepositoryJdbc.java:46)
+	at com.revature.repository.EmployeeRepositoryJdbc.main(EmployeeRepositoryJdbc.java:251)
+2018-03-12 13:38:09 TRACE EmployeeRepositoryJdbc:251 - false
+2018-03-12 13:38:09 TRACE EmployeeRepositoryJdbc:55 - Updating employee
+2018-03-12 13:38:09 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 13:38:10 TRACE EmployeeRepositoryJdbc:253 - true
+2018-03-12 13:38:10 TRACE EmployeeRepositoryJdbc:84 - Selecting employee
+2018-03-12 13:38:10 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 13:38:12 TRACE EmployeeRepositoryJdbc:254 - Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=AE9043C9F2AD12F24C2CEEB10C6A64F0, email=NewExample@gmail.com, userRole=EmployeeRole [id=1, type=EMPLOYEE]]
+2018-03-12 13:38:12 TRACE EmployeeRepositoryJdbc:118 - Selecting employee
+2018-03-12 13:38:12 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 13:38:13 TRACE EmployeeRepositoryJdbc:255 - Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=AE9043C9F2AD12F24C2CEEB10C6A64F0, email=NewExample@gmail.com, userRole=EmployeeRole [id=1, type=EMPLOYEE]]
+2018-03-12 13:38:13 TRACE EmployeeRepositoryJdbc:152 - Selecting all employees
+2018-03-12 13:38:13 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 13:38:14 TRACE EmployeeRepositoryJdbc:256 - [Employee [id=1, firstName=PETER, lastName=ALAGNA, username=PALAGNAJR, password=CFE456D83392A087DAF9DF95D5E18366, email=PETER.ALAGNA@REVATURE.COM, userRole=EmployeeRole [id=1, type=EMPLOYEE]], Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=AE9043C9F2AD12F24C2CEEB10C6A64F0, email=NewExample@gmail.com, userRole=EmployeeRole [id=1, type=EMPLOYEE]]]
+2018-03-12 13:38:14 TRACE EmployeeRepositoryJdbc:185 - Getting password hash
+2018-03-12 13:38:14 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 13:38:15 TRACE EmployeeRepositoryJdbc:257 - AE9043C9F2AD12F24C2CEEB10C6A64F0
+2018-03-12 13:38:15 TRACE EmployeeRepositoryJdbc:206 - Inserting new employee token
+2018-03-12 13:38:15 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 13:38:16 TRACE EmployeeRepositoryJdbc:259 - true
+2018-03-12 13:38:16 TRACE EmployeeRepositoryJdbc:226 - Inserting deleting employee token
+2018-03-12 13:38:16 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 13:38:18 ERROR EmployeeRepositoryJdbc:236 - Exception thrown while deleting employee token
+java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.deleteEmployeeToken(EmployeeRepositoryJdbc.java:234)
+	at com.revature.repository.EmployeeRepositoryJdbc.main(EmployeeRepositoryJdbc.java:260)
+2018-03-12 13:38:18 TRACE EmployeeRepositoryJdbc:260 - false
+2018-03-12 13:38:35 TRACE EmployeeRepositoryJdbc:206 - Inserting new employee token
+2018-03-12 13:38:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 13:38:37 TRACE EmployeeRepositoryJdbc:259 - true
+2018-03-12 13:38:37 TRACE EmployeeRepositoryJdbc:226 - Inserting deleting employee token
+2018-03-12 13:38:37 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 13:38:38 TRACE EmployeeRepositoryJdbc:260 - true
+2018-03-12 13:39:00 TRACE EmployeeRepositoryJdbc:206 - Inserting new employee token
+2018-03-12 13:39:00 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 13:39:01 TRACE EmployeeRepositoryJdbc:259 - true
+2018-03-12 13:39:01 TRACE EmployeeRepositoryJdbc:206 - Inserting new employee token
+2018-03-12 13:39:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 13:39:02 TRACE EmployeeRepositoryJdbc:261 - true
+2018-03-12 13:39:02 TRACE EmployeeRepositoryJdbc:226 - Inserting deleting employee token
+2018-03-12 13:39:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 13:39:03 TRACE EmployeeRepositoryJdbc:262 - true
+2018-03-12 13:40:06 TRACE EmployeeRepositoryJdbc:206 - Inserting new employee token
+2018-03-12 13:40:06 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 13:40:08 TRACE EmployeeRepositoryJdbc:259 - true
+2018-03-12 13:40:08 TRACE EmployeeRepositoryJdbc:206 - Inserting new employee token
+2018-03-12 13:40:08 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 13:40:09 TRACE EmployeeRepositoryJdbc:261 - true
