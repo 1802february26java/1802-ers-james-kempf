@@ -47,7 +47,31 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 
 	@Override
 	public boolean update(Employee employee) {
-		// TODO Auto-generated method stub
+		logger.trace("Updating employee");
+		try (Connection connection = ConnectionUtil.getConnection()) {
+			int parameterIndex = 0;
+			String sql = "UPDATE USER_T SET "
+					+ "U_FIRSTNAME = ?, "
+					+ "U_LASTNAME = ?, "
+					+ "U_USERNAME = ?, "
+					+ "U_PASSWORD = ?, "
+					+ "U_EMAIL = ?, "
+					+ "UR_ID = ? "
+					+ "WHERE U_ID = ?";
+			logger.trace(sql);
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setString(++parameterIndex, employee.getFirstName());
+			statement.setString(++parameterIndex, employee.getLastName());
+			statement.setString(++parameterIndex, employee.getUsername());
+			statement.setString(++parameterIndex, employee.getPassword());
+			statement.setString(++parameterIndex, employee.getEmail());
+			statement.setInt(++parameterIndex, employee.getEmployeeRole().getId());
+			statement.setInt(++parameterIndex, employee.getId());
+
+			return (statement.executeUpdate() > 0);
+		} catch (SQLException e) {
+			logger.error("Exception thrown while updating new employee", e);
+		}
 		return false;
 	}
 
@@ -98,6 +122,8 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 		Employee e = new Employee(100,"James","Kempf","jamesk4321","password1","example@gmail.com",er);
 		EmployeeRepositoryJdbc repository = EmployeeRepositoryJdbc.getInstance();
 		repository.insert(e);
+		e.setEmail("NewExample@gmail.com");
+		repository.update(e);
 		
 	}
 }

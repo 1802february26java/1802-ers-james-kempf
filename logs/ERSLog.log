@@ -40,3 +40,229 @@ java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
 	at com.revature.repository.EmployeeRepositoryJdbc.main(EmployeeRepositoryJdbc.java:100)
 2018-03-12 12:30:44 TRACE EmployeeRepositoryJdbc:27 - Inserting new employee
 2018-03-12 12:30:44 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 12:42:42 TRACE EmployeeRepositoryJdbc:27 - Inserting new employee
+2018-03-12 12:42:42 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 12:42:44 ERROR EmployeeRepositoryJdbc:43 - Exception thrown while inserting new employee
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (REIMBURSEMENT_DB.PK_USER) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.insert(EmployeeRepositoryJdbc.java:41)
+	at com.revature.repository.EmployeeRepositoryJdbc.main(EmployeeRepositoryJdbc.java:122)
+2018-03-12 12:42:44 TRACE EmployeeRepositoryJdbc:50 - Inserting new employee
+2018-03-12 12:42:44 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 12:42:45 ERROR EmployeeRepositoryJdbc:71 - Exception thrown while updating new employee
+java.sql.SQLSyntaxErrorException: ORA-00933: SQL command not properly ended
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.update(EmployeeRepositoryJdbc.java:69)
+	at com.revature.repository.EmployeeRepositoryJdbc.main(EmployeeRepositoryJdbc.java:124)
+2018-03-12 12:42:56 TRACE EmployeeRepositoryJdbc:27 - Inserting new employee
+2018-03-12 12:42:56 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 12:42:57 ERROR EmployeeRepositoryJdbc:43 - Exception thrown while inserting new employee
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (REIMBURSEMENT_DB.PK_USER) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.insert(EmployeeRepositoryJdbc.java:41)
+	at com.revature.repository.EmployeeRepositoryJdbc.main(EmployeeRepositoryJdbc.java:122)
+2018-03-12 12:42:57 TRACE EmployeeRepositoryJdbc:50 - Inserting new employee
+2018-03-12 12:42:57 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 12:42:58 ERROR EmployeeRepositoryJdbc:71 - Exception thrown while updating new employee
+java.sql.SQLSyntaxErrorException: ORA-00933: SQL command not properly ended
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.update(EmployeeRepositoryJdbc.java:69)
+	at com.revature.repository.EmployeeRepositoryJdbc.main(EmployeeRepositoryJdbc.java:124)
+2018-03-12 12:44:58 TRACE EmployeeRepositoryJdbc:27 - Inserting new employee
+2018-03-12 12:44:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 12:45:01 ERROR EmployeeRepositoryJdbc:43 - Exception thrown while inserting new employee
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (REIMBURSEMENT_DB.PK_USER) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.insert(EmployeeRepositoryJdbc.java:41)
+	at com.revature.repository.EmployeeRepositoryJdbc.main(EmployeeRepositoryJdbc.java:122)
+2018-03-12 12:45:01 TRACE EmployeeRepositoryJdbc:50 - Inserting new employee
+2018-03-12 12:45:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 12:45:04 TRACE EmployeeRepositoryJdbc:60 - UPDATE USER_T SET U_FIRST_NAME = ? U_LAST_NAME = ? U_USERNAME = ? U_PASSWORD = ? U_EMAIL = ? UR_ID = ?
+2018-03-12 12:45:04 ERROR EmployeeRepositoryJdbc:71 - Exception thrown while updating new employee
+java.sql.SQLSyntaxErrorException: ORA-00933: SQL command not properly ended
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.update(EmployeeRepositoryJdbc.java:69)
+	at com.revature.repository.EmployeeRepositoryJdbc.main(EmployeeRepositoryJdbc.java:124)
+2018-03-12 12:45:30 TRACE EmployeeRepositoryJdbc:27 - Inserting new employee
+2018-03-12 12:45:30 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 12:45:32 ERROR EmployeeRepositoryJdbc:43 - Exception thrown while inserting new employee
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (REIMBURSEMENT_DB.PK_USER) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.insert(EmployeeRepositoryJdbc.java:41)
+	at com.revature.repository.EmployeeRepositoryJdbc.main(EmployeeRepositoryJdbc.java:122)
+2018-03-12 12:45:32 TRACE EmployeeRepositoryJdbc:50 - Inserting new employee
+2018-03-12 12:45:32 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 12:45:33 TRACE EmployeeRepositoryJdbc:60 - UPDATE USER_T SET U_FIRST_NAME = ?, U_LAST_NAME = ?, U_USERNAME = ?, U_PASSWORD = ?, U_EMAIL = ?, UR_ID = ?
+2018-03-12 12:45:33 ERROR EmployeeRepositoryJdbc:71 - Exception thrown while updating new employee
+java.sql.SQLSyntaxErrorException: ORA-00904: "U_LAST_NAME": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.update(EmployeeRepositoryJdbc.java:69)
+	at com.revature.repository.EmployeeRepositoryJdbc.main(EmployeeRepositoryJdbc.java:124)
+2018-03-12 12:45:59 TRACE EmployeeRepositoryJdbc:27 - Inserting new employee
+2018-03-12 12:45:59 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 12:46:00 ERROR EmployeeRepositoryJdbc:43 - Exception thrown while inserting new employee
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (REIMBURSEMENT_DB.PK_USER) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.insert(EmployeeRepositoryJdbc.java:41)
+	at com.revature.repository.EmployeeRepositoryJdbc.main(EmployeeRepositoryJdbc.java:122)
+2018-03-12 12:46:00 TRACE EmployeeRepositoryJdbc:50 - Inserting new employee
+2018-03-12 12:46:00 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 12:46:00 TRACE EmployeeRepositoryJdbc:60 - UPDATE USER_T SET U_FIRSTNAME = ?, U_LASTNAME = ?, U_USERNAME = ?, U_PASSWORD = ?, U_EMAIL = ?, UR_ID = ?
+2018-03-12 12:46:01 ERROR EmployeeRepositoryJdbc:71 - Exception thrown while updating new employee
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (REIMBURSEMENT_DB.UNQ_USERNAME) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.update(EmployeeRepositoryJdbc.java:69)
+	at com.revature.repository.EmployeeRepositoryJdbc.main(EmployeeRepositoryJdbc.java:124)
+2018-03-12 12:46:41 TRACE EmployeeRepositoryJdbc:27 - Inserting new employee
+2018-03-12 12:46:41 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 12:46:42 ERROR EmployeeRepositoryJdbc:43 - Exception thrown while inserting new employee
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (REIMBURSEMENT_DB.PK_USER) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.insert(EmployeeRepositoryJdbc.java:41)
+	at com.revature.repository.EmployeeRepositoryJdbc.main(EmployeeRepositoryJdbc.java:124)
+2018-03-12 12:46:42 TRACE EmployeeRepositoryJdbc:50 - Inserting new employee
+2018-03-12 12:46:42 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 12:46:42 TRACE EmployeeRepositoryJdbc:61 - UPDATE USER_T SET U_FIRSTNAME = ?, U_LASTNAME = ?, U_USERNAME = ?, U_PASSWORD = ?, U_EMAIL = ?, UR_ID = ? WHERE U_ID = ?
