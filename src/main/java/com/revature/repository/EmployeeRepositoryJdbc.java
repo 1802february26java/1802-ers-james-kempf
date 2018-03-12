@@ -113,7 +113,35 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 
 	@Override
 	public Employee select(String username) {
-		// TODO Auto-generated method stub
+		logger.trace("Selecting employee");
+		try (Connection connection = ConnectionUtil.getConnection()) {
+			int parameterIndex = 0;
+			String sql = "SELECT * FROM USER_T INNER JOIN USER_ROLE "
+					+ "ON USER_T.UR_ID = USER_ROLE.UR_ID "
+					+ "WHERE U_USERNAME = ?";
+			
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setString(++parameterIndex, username);
+
+			ResultSet result = statement.executeQuery();
+			
+			if (result.next()) {
+				return new Employee(
+						result.getInt("U_ID"),
+						result.getString("U_FIRSTNAME"),
+						result.getString("U_LASTNAME"),
+						result.getString("U_USERNAME"),
+						result.getString("U_PASSWORD"),
+						result.getString("U_EMAIL"),
+						new EmployeeRole(
+								result.getInt("UR_ID"),
+								result.getString("UR_TYPE")
+								)
+						);
+			}
+		} catch (SQLException e) {
+			logger.error("Exception thrown while selecting employee", e);
+		}
 		return null;
 	}
 
@@ -155,5 +183,6 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 		e.setEmail("NewExample@gmail.com");
 		repository.update(e);
 		logger.trace(repository.select(100).toString());
+		logger.trace(repository.select("jamesk4321").toString());
 	}
 }

@@ -347,3 +347,31 @@ java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint 
 2018-03-12 13:02:13 TRACE EmployeeRepositoryJdbc:82 - Selecting employee
 2018-03-12 13:02:13 TRACE ConnectionUtil:14 - Getting connection
 2018-03-12 13:02:14 TRACE EmployeeRepositoryJdbc:157 - Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=password1, email=NewExample@gmail.com, userRole=EmployeeRole [id=1, type=EMPLOYEE]]
+2018-03-12 13:06:26 TRACE EmployeeRepositoryJdbc:28 - Inserting new employee
+2018-03-12 13:06:26 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 13:06:27 ERROR EmployeeRepositoryJdbc:44 - Exception thrown while inserting new employee
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (REIMBURSEMENT_DB.PK_USER) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.insert(EmployeeRepositoryJdbc.java:42)
+	at com.revature.repository.EmployeeRepositoryJdbc.main(EmployeeRepositoryJdbc.java:182)
+2018-03-12 13:06:27 TRACE EmployeeRepositoryJdbc:51 - Updating employee
+2018-03-12 13:06:27 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 13:06:28 TRACE EmployeeRepositoryJdbc:82 - Selecting employee
+2018-03-12 13:06:28 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 13:06:28 TRACE EmployeeRepositoryJdbc:185 - Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=password1, email=NewExample@gmail.com, userRole=EmployeeRole [id=1, type=EMPLOYEE]]
+2018-03-12 13:06:28 TRACE EmployeeRepositoryJdbc:116 - Selecting employee
+2018-03-12 13:06:28 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 13:06:29 TRACE EmployeeRepositoryJdbc:186 - Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=password1, email=NewExample@gmail.com, userRole=EmployeeRole [id=1, type=EMPLOYEE]]
