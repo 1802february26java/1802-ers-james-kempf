@@ -2,6 +2,7 @@ package com.revature.repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
@@ -72,19 +73,6 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 					+ "RS_ID = ?, "
 					+ "RT_ID = ?"; 
 			
-//			Name          Null?    Type           
-//					------------- -------- -------------- 
-//					R_ID          NOT NULL NUMBER         
-//					R_REQUESTED   NOT NULL TIMESTAMP(6)   
-//					R_RESOLVED             TIMESTAMP(6)   
-//					R_AMOUNT      NOT NULL NUMBER(8,2)    
-//					R_DESCRIPTION          VARCHAR2(4000) 
-//					R_RECEIPT              BLOB           
-//					EMPLOYEE_ID   NOT NULL NUMBER         
-//					MANAGER_ID             NUMBER         
-//					RS_ID         NOT NULL NUMBER         
-//					RT_ID         NOT NULL NUMBER         
-			
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setInt(++parameterIndex, reimbursement.getId());
 			statement.setTimestamp(++parameterIndex, Timestamp.valueOf(reimbursement.getRequested()));
@@ -113,7 +101,46 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 
 	@Override
 	public Reimbursement select(int reimbursementId) {
-		// TODO Auto-generated method stub
+		logger.trace("Selecting reimbursement");
+		try (Connection connection = ConnectionUtil.getConnection()) {
+			int parameterIndex = 0;
+			String sql = "SELECT * FROM REIMBURSEMENT R INNER JOIN REIMBURSEMENT_STATUS RS "
+					+ "ON R.RS_ID = RS.RS_ID "
+					+ "INNER JOIN REIMBURSEMENT_TYPE RT "
+					+ "ON R.RT_ID = RT.RT_ID "
+					+ "WHERE R.R_ID = ?";  
+			
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setInt(++parameterIndex, reimbursementId);
+			
+			ResultSet result = statement.executeQuery();
+
+			if (result.next()) {
+				Reimbursement reimbursement = new Reimbursement(
+						result.getInt("R_ID"),
+						result.getTimestamp("R_REQUESTED").toLocalDateTime(),
+						null,
+						result.getDouble("R_AMOUNT"),
+						result.getString("R_DESCRIPTION"),
+						EmployeeRepositoryJdbc.getInstance().select(result.getInt("EMPLOYEE_ID")),
+						EmployeeRepositoryJdbc.getInstance().select(result.getInt("MANAGER_ID")),
+						new ReimbursementStatus(
+								result.getInt("RS_ID"),
+								result.getString("RS_STATUS")
+								),
+						new ReimbursementType(
+								result.getInt("RT_ID"),
+								result.getString("RT_TYPE")
+								)
+						);
+				if (result.getString("R_RESOLVED") != null) {
+					reimbursement.setResolved(result.getTimestamp("R_RESOLVED").toLocalDateTime());
+				}
+				return reimbursement;
+			}
+		} catch (SQLException e) {
+			logger.error("Exception thrown while selecting reimbursement", e);
+		}
 		return null;
 	}
 
@@ -146,7 +173,20 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+	
+//	Name          Null?    Type           
+//	------------- -------- -------------- 
+//	R_ID          NOT NULL NUMBER         
+//	R_REQUESTED   NOT NULL TIMESTAMP(6)   
+//	R_RESOLVED             TIMESTAMP(6)   
+//	R_AMOUNT      NOT NULL NUMBER(8,2)    
+//	R_DESCRIPTION          VARCHAR2(4000) 
+//	R_RECEIPT              BLOB           
+//	EMPLOYEE_ID   NOT NULL NUMBER         
+//	MANAGER_ID             NUMBER         
+//	RS_ID         NOT NULL NUMBER         
+//	RT_ID         NOT NULL NUMBER         
+	
 	public static void main(String[] args) {
 		ReimbursementRepositoryJdbc repository = ReimbursementRepositoryJdbc.getInstance();
 		EmployeeRole er = new EmployeeRole(1, "EMPLOYEE");
@@ -157,5 +197,6 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 //		logger.trace(repository.insert(r));
 		r.setAmount(100);
 		logger.trace(repository.update(r));
+		logger.trace(repository.select(100));
 	}
 }

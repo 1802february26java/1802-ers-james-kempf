@@ -879,3 +879,43 @@ java.sql.SQLIntegrityConstraintViolationException: ORA-02291: integrity constrai
 2018-03-12 15:12:21 TRACE ReimbursementRepositoryJdbc:61 - Updating reimbursement
 2018-03-12 15:12:21 TRACE ConnectionUtil:14 - Getting connection
 2018-03-12 15:12:22 TRACE ReimbursementRepositoryJdbc:159 - true
+2018-03-12 15:51:57 TRACE ReimbursementRepositoryJdbc:62 - Updating reimbursement
+2018-03-12 15:51:57 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 15:51:58 TRACE ReimbursementRepositoryJdbc:215 - true
+2018-03-12 15:51:58 TRACE ReimbursementRepositoryJdbc:104 - Selecting reimbursement
+2018-03-12 15:51:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 15:51:58 ERROR ReimbursementRepositoryJdbc:158 - Exception thrown while selecting reimbursement
+java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3867)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1502)
+	at com.revature.repository.ReimbursementRepositoryJdbc.select(ReimbursementRepositoryJdbc.java:116)
+	at com.revature.repository.ReimbursementRepositoryJdbc.main(ReimbursementRepositoryJdbc.java:216)
+2018-03-12 15:51:58 TRACE ReimbursementRepositoryJdbc:216 - 
+2018-03-12 15:52:17 TRACE ReimbursementRepositoryJdbc:62 - Updating reimbursement
+2018-03-12 15:52:17 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 15:52:18 TRACE ReimbursementRepositoryJdbc:215 - true
+2018-03-12 15:52:18 TRACE ReimbursementRepositoryJdbc:104 - Selecting reimbursement
+2018-03-12 15:52:18 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 15:55:53 TRACE ReimbursementRepositoryJdbc:62 - Updating reimbursement
+2018-03-12 15:55:53 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 15:55:54 TRACE ReimbursementRepositoryJdbc:219 - true
+2018-03-12 15:55:54 TRACE ReimbursementRepositoryJdbc:104 - Selecting reimbursement
+2018-03-12 15:55:54 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 15:55:55 TRACE EmployeeRepositoryJdbc:83 - Selecting employee
+2018-03-12 15:55:55 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 15:55:55 TRACE EmployeeRepositoryJdbc:83 - Selecting employee
+2018-03-12 15:55:55 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 15:55:55 TRACE ReimbursementRepositoryJdbc:220 - Reimbursement [id=100, requested=2018-03-12T15:55:53.160, resolved=null, amount=100.0, description=Sample, requester=Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=AE9043C9F2AD12F24C2CEEB10C6A64F0, email=NewExample@gmail.com, userRole=EmployeeRole [id=2, type=MANAGER]], approver=null, status=ReimbursementStatus [id=1, status=PENDING], type=ReimbursementType [id=1, type=OTHER]]
