@@ -346,19 +346,6 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 		return null;
 	}
 
-	//	Name          Null?    Type           
-	//	------------- -------- -------------- 
-	//	R_ID          NOT NULL NUMBER         
-	//	R_REQUESTED   NOT NULL TIMESTAMP(6)   
-	//	R_RESOLVED             TIMESTAMP(6)   
-	//	R_AMOUNT      NOT NULL NUMBER(8,2)    
-	//	R_DESCRIPTION          VARCHAR2(4000) 
-	//	R_RECEIPT              BLOB           
-	//	EMPLOYEE_ID   NOT NULL NUMBER         
-	//	MANAGER_ID             NUMBER         
-	//	RS_ID         NOT NULL NUMBER         
-	//	RT_ID         NOT NULL NUMBER         
-
 	public static void main(String[] args) {
 		ReimbursementRepositoryJdbc repository = ReimbursementRepositoryJdbc.getInstance();
 		EmployeeRole er = new EmployeeRole(1, "EMPLOYEE");

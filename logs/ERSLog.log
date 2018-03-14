@@ -1397,3 +1397,5 @@ java.sql.SQLSyntaxErrorException: ORA-00904: "R"."RD_ID": invalid identifier
 2018-03-12 16:41:16 TRACE ReimbursementRepositoryJdbc:327 - Selecting types
 2018-03-12 16:41:16 TRACE ConnectionUtil:14 - Getting connection
 2018-03-12 16:41:17 TRACE ReimbursementRepositoryJdbc:377 - [ReimbursementType [id=3, type=CERTIFICATION], ReimbursementType [id=2, type=COURSE], ReimbursementType [id=4, type=TRAVELING], ReimbursementType [id=1, type=OTHER]]
+2018-03-14 12:52:39 TRACE EmployeeRepositoryJdbc:151 - Selecting all employees
+2018-03-14 12:52:39 TRACE ConnectionUtil:14 - Getting connection
