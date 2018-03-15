@@ -93,16 +93,4 @@ public class EmployeeServiceAlpha implements EmployeeService {
 		boolean expired = (repository.selectEmployeeToken(employeeToken) == null);
 		return expired;
 	}
-
-	public static void main(String[] args) {
-		EmployeeRole employeeRole = new EmployeeRole(1, "EMPLOYEE");
-		Employee employee = new Employee(100,"James","Kempf","jamesk4321","password1","example@gmail.com",employeeRole);
-		EmployeeService service = new EmployeeServiceAlpha();
-		// Employee functions
-		System.out.println(service.createEmployee(employee));
-		System.out.println(service.getEmployeeInformation(employee));
-		System.out.println(service.getAllEmployeesInformation());
-		// Token functions
-		
-		}
 }

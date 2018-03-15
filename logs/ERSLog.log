@@ -1447,3 +1447,208 @@ java.sql.SQLSyntaxErrorException: ORA-00904: "R"."RD_ID": invalid identifier
 2018-03-15 12:20:54 TRACE EmployeeRepositoryJdbc:225 - Deleting employee token
 2018-03-15 12:20:54 TRACE ConnectionUtil:14 - Getting connection
 2018-03-15 12:20:54 TRACE EmployeeRepositoryJdbc:299 - true
+2018-03-15 12:25:52 TRACE EmployeeRepositoryJdbc:31 - Inserting new employee
+2018-03-15 12:25:52 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:25:53 ERROR EmployeeRepositoryJdbc:53 - Exception thrown while inserting new employee
+java.sql.SQLSyntaxErrorException: ORA-00904: "U_LAST_NAME": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.insert(EmployeeRepositoryJdbc.java:51)
+	at com.revature.repository.EmployeeRepositoryJdbc.main(EmployeeRepositoryJdbc.java:292)
+2018-03-15 12:25:53 TRACE EmployeeRepositoryJdbc:292 - false
+2018-03-15 12:25:53 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-15 12:25:53 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:25:53 TRACE EmployeeRepositoryJdbc:294 - false
+2018-03-15 12:25:53 TRACE EmployeeRepositoryJdbc:91 - Selecting employee
+2018-03-15 12:25:53 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:26:10 TRACE EmployeeRepositoryJdbc:31 - Inserting new employee
+2018-03-15 12:26:10 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:26:11 TRACE EmployeeRepositoryJdbc:292 - true
+2018-03-15 12:26:11 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-15 12:26:11 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:26:11 TRACE EmployeeRepositoryJdbc:294 - false
+2018-03-15 12:26:11 TRACE EmployeeRepositoryJdbc:91 - Selecting employee
+2018-03-15 12:26:11 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:26:39 TRACE EmployeeRepositoryJdbc:31 - Inserting new employee
+2018-03-15 12:26:39 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:26:40 ERROR EmployeeRepositoryJdbc:53 - Exception thrown while inserting new employee
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (REIMBURSEMENT_DB.UNQ_USERNAME) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.insert(EmployeeRepositoryJdbc.java:51)
+	at com.revature.repository.EmployeeRepositoryJdbc.main(EmployeeRepositoryJdbc.java:292)
+2018-03-15 12:26:40 TRACE EmployeeRepositoryJdbc:292 - false
+2018-03-15 12:26:40 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-15 12:26:40 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:26:40 TRACE EmployeeRepositoryJdbc:294 - false
+2018-03-15 12:26:40 TRACE EmployeeRepositoryJdbc:91 - Selecting employee
+2018-03-15 12:26:40 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:26:41 TRACE EmployeeRepositoryJdbc:295 - Employee [id=21, firstName=James, lastName=Kempf, username=jamesk4321, password=412AA8E4CA384E9ED61CE8B3FDBCF022, email=example@gmail.com, userRole=EmployeeRole [id=2, type=MANAGER]]
+2018-03-15 12:26:41 TRACE EmployeeRepositoryJdbc:125 - Selecting employee
+2018-03-15 12:26:41 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:26:41 TRACE EmployeeRepositoryJdbc:296 - Employee [id=21, firstName=James, lastName=Kempf, username=jamesk4321, password=412AA8E4CA384E9ED61CE8B3FDBCF022, email=example@gmail.com, userRole=EmployeeRole [id=2, type=MANAGER]]
+2018-03-15 12:26:41 TRACE EmployeeRepositoryJdbc:159 - Selecting all employees
+2018-03-15 12:26:41 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:26:41 TRACE EmployeeRepositoryJdbc:297 - [Employee [id=1, firstName=PETER, lastName=ALAGNA, username=PALAGNAJR, password=CFE456D83392A087DAF9DF95D5E18366, email=PETER.ALAGNA@REVATURE.COM, userRole=EmployeeRole [id=1, type=EMPLOYEE]], Employee [id=21, firstName=James, lastName=Kempf, username=jamesk4321, password=412AA8E4CA384E9ED61CE8B3FDBCF022, email=example@gmail.com, userRole=EmployeeRole [id=2, type=MANAGER]]]
+2018-03-15 12:26:41 TRACE EmployeeRepositoryJdbc:192 - Getting password hash
+2018-03-15 12:26:41 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:26:41 TRACE EmployeeRepositoryJdbc:298 - 412AA8E4CA384E9ED61CE8B3FDBCF022
+2018-03-15 12:26:41 TRACE EmployeeRepositoryJdbc:211 - Inserting new employee token
+2018-03-15 12:26:41 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:26:42 ERROR EmployeeRepositoryJdbc:224 - Exception thrown while inserting new employee token
+java.sql.SQLIntegrityConstraintViolationException: ORA-02291: integrity constraint (REIMBURSEMENT_DB.FK_USER_PR) violated - parent key not found
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.insertEmployeeToken(EmployeeRepositoryJdbc.java:222)
+	at com.revature.repository.EmployeeRepositoryJdbc.main(EmployeeRepositoryJdbc.java:303)
+2018-03-15 12:26:42 TRACE EmployeeRepositoryJdbc:303 - false
+2018-03-15 12:26:42 TRACE EmployeeRepositoryJdbc:248 - Selecting employee token
+2018-03-15 12:26:42 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:26:42 TRACE EmployeeRepositoryJdbc:304 - 
+2018-03-15 12:26:42 TRACE EmployeeRepositoryJdbc:231 - Deleting employee token
+2018-03-15 12:26:42 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:26:42 TRACE EmployeeRepositoryJdbc:305 - false
+2018-03-15 12:28:32 TRACE EmployeeRepositoryJdbc:31 - Inserting new employee
+2018-03-15 12:28:32 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:28:33 ERROR EmployeeRepositoryJdbc:53 - Exception thrown while inserting new employee
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (REIMBURSEMENT_DB.UNQ_USERNAME) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.insert(EmployeeRepositoryJdbc.java:51)
+	at com.revature.repository.EmployeeRepositoryJdbc.main(EmployeeRepositoryJdbc.java:293)
+2018-03-15 12:28:33 TRACE EmployeeRepositoryJdbc:293 - false
+2018-03-15 12:28:33 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-15 12:28:33 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:28:33 TRACE EmployeeRepositoryJdbc:295 - false
+2018-03-15 12:28:33 TRACE EmployeeRepositoryJdbc:91 - Selecting employee
+2018-03-15 12:28:33 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:28:33 TRACE EmployeeRepositoryJdbc:296 - Employee [id=21, firstName=James, lastName=Kempf, username=jamesk4321, password=412AA8E4CA384E9ED61CE8B3FDBCF022, email=example@gmail.com, userRole=EmployeeRole [id=2, type=MANAGER]]
+2018-03-15 12:28:33 TRACE EmployeeRepositoryJdbc:125 - Selecting employee
+2018-03-15 12:28:33 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:28:33 TRACE EmployeeRepositoryJdbc:297 - Employee [id=21, firstName=James, lastName=Kempf, username=jamesk4321, password=412AA8E4CA384E9ED61CE8B3FDBCF022, email=example@gmail.com, userRole=EmployeeRole [id=2, type=MANAGER]]
+2018-03-15 12:28:33 TRACE EmployeeRepositoryJdbc:159 - Selecting all employees
+2018-03-15 12:28:33 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:28:33 TRACE EmployeeRepositoryJdbc:298 - [Employee [id=1, firstName=PETER, lastName=ALAGNA, username=PALAGNAJR, password=CFE456D83392A087DAF9DF95D5E18366, email=PETER.ALAGNA@REVATURE.COM, userRole=EmployeeRole [id=1, type=EMPLOYEE]], Employee [id=21, firstName=James, lastName=Kempf, username=jamesk4321, password=412AA8E4CA384E9ED61CE8B3FDBCF022, email=example@gmail.com, userRole=EmployeeRole [id=2, type=MANAGER]]]
+2018-03-15 12:28:33 TRACE EmployeeRepositoryJdbc:192 - Getting password hash
+2018-03-15 12:28:33 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:28:33 TRACE EmployeeRepositoryJdbc:299 - 412AA8E4CA384E9ED61CE8B3FDBCF022
+2018-03-15 12:28:33 TRACE EmployeeRepositoryJdbc:211 - Inserting new employee token
+2018-03-15 12:28:33 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:28:33 ERROR EmployeeRepositoryJdbc:224 - Exception thrown while inserting new employee token
+java.sql.SQLIntegrityConstraintViolationException: ORA-02291: integrity constraint (REIMBURSEMENT_DB.FK_USER_PR) violated - parent key not found
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.insertEmployeeToken(EmployeeRepositoryJdbc.java:222)
+	at com.revature.repository.EmployeeRepositoryJdbc.main(EmployeeRepositoryJdbc.java:304)
+2018-03-15 12:28:33 TRACE EmployeeRepositoryJdbc:304 - false
+2018-03-15 12:28:33 TRACE EmployeeRepositoryJdbc:248 - Selecting employee token
+2018-03-15 12:28:33 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:28:34 TRACE EmployeeRepositoryJdbc:305 - 
+2018-03-15 12:28:34 TRACE EmployeeRepositoryJdbc:231 - Deleting employee token
+2018-03-15 12:28:34 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:28:34 TRACE EmployeeRepositoryJdbc:306 - false
+2018-03-15 12:30:43 TRACE EmployeeRepositoryJdbc:31 - Inserting new employee
+2018-03-15 12:30:43 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:30:44 ERROR EmployeeRepositoryJdbc:53 - Exception thrown while inserting new employee
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (REIMBURSEMENT_DB.UNQ_USERNAME) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.insert(EmployeeRepositoryJdbc.java:51)
+	at com.revature.repository.EmployeeRepositoryJdbc.main(EmployeeRepositoryJdbc.java:292)
+2018-03-15 12:30:44 TRACE EmployeeRepositoryJdbc:292 - false
+2018-03-15 12:30:44 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-15 12:30:44 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:30:44 TRACE EmployeeRepositoryJdbc:294 - true
+2018-03-15 12:30:44 TRACE EmployeeRepositoryJdbc:91 - Selecting employee
+2018-03-15 12:30:44 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:30:44 TRACE EmployeeRepositoryJdbc:295 - Employee [id=21, firstName=James, lastName=Kempf, username=jamesk4321, password=p4ssw0rd, email=new.example@gmail.com, userRole=EmployeeRole [id=2, type=MANAGER]]
+2018-03-15 12:30:44 TRACE EmployeeRepositoryJdbc:125 - Selecting employee
+2018-03-15 12:30:44 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:30:44 TRACE EmployeeRepositoryJdbc:296 - Employee [id=21, firstName=James, lastName=Kempf, username=jamesk4321, password=p4ssw0rd, email=new.example@gmail.com, userRole=EmployeeRole [id=2, type=MANAGER]]
+2018-03-15 12:30:44 TRACE EmployeeRepositoryJdbc:159 - Selecting all employees
+2018-03-15 12:30:44 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:30:44 TRACE EmployeeRepositoryJdbc:297 - [Employee [id=1, firstName=PETER, lastName=ALAGNA, username=PALAGNAJR, password=CFE456D83392A087DAF9DF95D5E18366, email=PETER.ALAGNA@REVATURE.COM, userRole=EmployeeRole [id=1, type=EMPLOYEE]], Employee [id=21, firstName=James, lastName=Kempf, username=jamesk4321, password=p4ssw0rd, email=new.example@gmail.com, userRole=EmployeeRole [id=2, type=MANAGER]]]
+2018-03-15 12:30:44 TRACE EmployeeRepositoryJdbc:192 - Getting password hash
+2018-03-15 12:30:44 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:30:44 TRACE EmployeeRepositoryJdbc:298 - 412AA8E4CA384E9ED61CE8B3FDBCF022
+2018-03-15 12:30:44 TRACE EmployeeRepositoryJdbc:211 - Inserting new employee token
+2018-03-15 12:30:44 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:30:44 TRACE EmployeeRepositoryJdbc:303 - true
+2018-03-15 12:30:44 TRACE EmployeeRepositoryJdbc:248 - Selecting employee token
+2018-03-15 12:30:44 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:30:45 TRACE EmployeeRepositoryJdbc:304 - EmployeeToken [id=21, token=-1239463610, creationDate=2018-03-15T12:30:44.803, requester=Employee [id=21, firstName=James, lastName=Kempf, username=jamesk4321, password=p4ssw0rd, email=new.example@gmail.com, userRole=EmployeeRole [id=2, type=MANAGER]]]
+2018-03-15 12:30:45 TRACE EmployeeRepositoryJdbc:231 - Deleting employee token
+2018-03-15 12:30:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:30:45 TRACE EmployeeRepositoryJdbc:305 - true

@@ -31,10 +31,16 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 		logger.trace("Inserting new employee");
 		try (Connection connection = ConnectionUtil.getConnection()) {
 			int parameterIndex = 0;
-			String sql = "INSERT INTO USER_T VALUES(?,?,?,?,?,?,?)";
+			String sql = "INSERT INTO USER_T("
+					+ "U_FIRSTNAME, "
+					+ "U_LASTNAME, "
+					+ "U_USERNAME, "
+					+ "U_PASSWORD, "
+					+ "U_EMAIL, "
+					+ "UR_ID) "
+					+ "VALUES(?,?,?,?,?,?)";
 			
 			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setInt(++parameterIndex, employee.getId());
 			statement.setString(++parameterIndex, employee.getFirstName());
 			statement.setString(++parameterIndex, employee.getLastName());
 			statement.setString(++parameterIndex, employee.getUsername());
@@ -279,23 +285,23 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 	}
 	
 	public static void main(String[] args) {
-		EmployeeRole er = new EmployeeRole(1, "EMPLOYEE");
-		Employee e = new Employee(100,"James","Kempf","jamesk4321","p4ssw0rd","example@gmail.com",er);
+		EmployeeRole employeeRole = new EmployeeRole(2, "MANAGER");
+		Employee employee = new Employee(21,"James","Kempf","jamesk4321","p4ssw0rd","example@gmail.com",employeeRole);
 		EmployeeRepositoryJdbc repository = EmployeeRepositoryJdbc.getInstance();
 		
-//		logger.trace(repository.insert(e));
-		e.setEmail("NewExample@gmail.com");
-		logger.trace(repository.update(e));
-		logger.trace(repository.select(100).toString());
+		logger.trace(repository.insert(employee));
+		employee.setEmail("new.example@gmail.com");
+		logger.trace(repository.update(employee));
+		logger.trace(repository.select(employee.getId()).toString());
 		logger.trace(repository.select("jamesk4321").toString());
 		logger.trace(repository.selectAll());
-		logger.trace(repository.getPasswordHash(e));
+		logger.trace(repository.getPasswordHash(employee));
 		
-		EmployeeToken et = new EmployeeToken(100, null, LocalDateTime.now(), e);
-		String token = et.getRequester().getUsername() + Timestamp.valueOf(et.getCreationDate());
-		et.setToken(Integer.toString(token.hashCode()));
-		logger.trace(repository.insertEmployeeToken(et));
-		logger.trace(repository.selectEmployeeToken(et));
-		logger.trace(repository.deleteEmployeeToken(et));
+		EmployeeToken employeeToken = new EmployeeToken(employee.getId(), null, LocalDateTime.now(), employee);
+		String token = employeeToken.getRequester().getUsername() + Timestamp.valueOf(employeeToken.getCreationDate());
+		employeeToken.setToken(Integer.toString(token.hashCode()));
+		logger.trace(repository.insertEmployeeToken(employeeToken));
+		logger.trace(repository.selectEmployeeToken(employeeToken));
+		logger.trace(repository.deleteEmployeeToken(employeeToken));
 	}
 }
