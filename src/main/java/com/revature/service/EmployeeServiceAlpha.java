@@ -25,6 +25,10 @@ public class EmployeeServiceAlpha implements EmployeeService {
 
 	@Override
 	public Employee authenticate(Employee employee) {
+		Employee loggedEmployee = repository.select(employee.getUsername());
+		if (loggedEmployee.getPassword().equals(repository.getPasswordHash(employee))) {
+			return loggedEmployee;
+		}
 		return null;
 	}
 
