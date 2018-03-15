@@ -22,6 +22,7 @@ public class LoginControllerAlpha implements LoginController {
 		employee.setUsername(request.getParameter("username"));
 		employee.setPassword(request.getParameter("password"));
 		employee = EmployeeServiceAlpha.getInstance().authenticate(employee);
+		logger.trace(employee.toString());
 		if (employee == null) {
 			return new ClientMessage("Authentication Failed");
 		}
