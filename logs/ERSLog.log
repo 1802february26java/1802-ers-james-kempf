@@ -1399,3 +1399,51 @@ java.sql.SQLSyntaxErrorException: ORA-00904: "R"."RD_ID": invalid identifier
 2018-03-12 16:41:17 TRACE ReimbursementRepositoryJdbc:377 - [ReimbursementType [id=3, type=CERTIFICATION], ReimbursementType [id=2, type=COURSE], ReimbursementType [id=4, type=TRAVELING], ReimbursementType [id=1, type=OTHER]]
 2018-03-14 12:52:39 TRACE EmployeeRepositoryJdbc:151 - Selecting all employees
 2018-03-14 12:52:39 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:16:41 TRACE EmployeeRepositoryJdbc:54 - Updating employee
+2018-03-15 12:16:41 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:16:43 TRACE EmployeeRepositoryJdbc:288 - true
+2018-03-15 12:16:43 TRACE EmployeeRepositoryJdbc:85 - Selecting employee
+2018-03-15 12:16:43 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:16:43 TRACE EmployeeRepositoryJdbc:289 - Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=password1, email=NewExample@gmail.com, userRole=EmployeeRole [id=1, type=EMPLOYEE]]
+2018-03-15 12:16:43 TRACE EmployeeRepositoryJdbc:119 - Selecting employee
+2018-03-15 12:16:43 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:16:45 TRACE EmployeeRepositoryJdbc:290 - Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=password1, email=NewExample@gmail.com, userRole=EmployeeRole [id=1, type=EMPLOYEE]]
+2018-03-15 12:16:45 TRACE EmployeeRepositoryJdbc:153 - Selecting all employees
+2018-03-15 12:16:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:16:46 TRACE EmployeeRepositoryJdbc:291 - [Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=password1, email=NewExample@gmail.com, userRole=EmployeeRole [id=1, type=EMPLOYEE]], Employee [id=1, firstName=PETER, lastName=ALAGNA, username=PALAGNAJR, password=CFE456D83392A087DAF9DF95D5E18366, email=PETER.ALAGNA@REVATURE.COM, userRole=EmployeeRole [id=1, type=EMPLOYEE]]]
+2018-03-15 12:16:46 TRACE EmployeeRepositoryJdbc:186 - Getting password hash
+2018-03-15 12:16:46 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:16:48 TRACE EmployeeRepositoryJdbc:292 - AE9043C9F2AD12F24C2CEEB10C6A64F0
+2018-03-15 12:16:48 TRACE EmployeeRepositoryJdbc:205 - Inserting new employee token
+2018-03-15 12:16:48 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:16:50 TRACE EmployeeRepositoryJdbc:297 - true
+2018-03-15 12:16:50 TRACE EmployeeRepositoryJdbc:242 - Selecting employee token
+2018-03-15 12:16:50 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:16:51 TRACE EmployeeRepositoryJdbc:298 - EmployeeToken [id=100, token=-48903081, creationDate=2018-03-15T12:16:48.594, requester=Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=password1, email=NewExample@gmail.com, userRole=EmployeeRole [id=1, type=EMPLOYEE]]]
+2018-03-15 12:16:51 TRACE EmployeeRepositoryJdbc:225 - Deleting employee token
+2018-03-15 12:16:51 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:16:51 TRACE EmployeeRepositoryJdbc:299 - true
+2018-03-15 12:20:51 TRACE EmployeeRepositoryJdbc:54 - Updating employee
+2018-03-15 12:20:51 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:20:53 TRACE EmployeeRepositoryJdbc:288 - true
+2018-03-15 12:20:53 TRACE EmployeeRepositoryJdbc:85 - Selecting employee
+2018-03-15 12:20:53 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:20:53 TRACE EmployeeRepositoryJdbc:289 - Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=p4ssw0rd, email=NewExample@gmail.com, userRole=EmployeeRole [id=1, type=EMPLOYEE]]
+2018-03-15 12:20:53 TRACE EmployeeRepositoryJdbc:119 - Selecting employee
+2018-03-15 12:20:53 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:20:53 TRACE EmployeeRepositoryJdbc:290 - Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=p4ssw0rd, email=NewExample@gmail.com, userRole=EmployeeRole [id=1, type=EMPLOYEE]]
+2018-03-15 12:20:53 TRACE EmployeeRepositoryJdbc:153 - Selecting all employees
+2018-03-15 12:20:53 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:20:53 TRACE EmployeeRepositoryJdbc:291 - [Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=p4ssw0rd, email=NewExample@gmail.com, userRole=EmployeeRole [id=1, type=EMPLOYEE]], Employee [id=1, firstName=PETER, lastName=ALAGNA, username=PALAGNAJR, password=CFE456D83392A087DAF9DF95D5E18366, email=PETER.ALAGNA@REVATURE.COM, userRole=EmployeeRole [id=1, type=EMPLOYEE]]]
+2018-03-15 12:20:53 TRACE EmployeeRepositoryJdbc:186 - Getting password hash
+2018-03-15 12:20:53 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:20:53 TRACE EmployeeRepositoryJdbc:292 - 412AA8E4CA384E9ED61CE8B3FDBCF022
+2018-03-15 12:20:53 TRACE EmployeeRepositoryJdbc:205 - Inserting new employee token
+2018-03-15 12:20:53 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:20:53 TRACE EmployeeRepositoryJdbc:297 - true
+2018-03-15 12:20:53 TRACE EmployeeRepositoryJdbc:242 - Selecting employee token
+2018-03-15 12:20:53 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:20:54 TRACE EmployeeRepositoryJdbc:298 - EmployeeToken [id=100, token=595695617, creationDate=2018-03-15T12:20:53.735, requester=Employee [id=100, firstName=James, lastName=Kempf, username=jamesk4321, password=p4ssw0rd, email=NewExample@gmail.com, userRole=EmployeeRole [id=1, type=EMPLOYEE]]]
+2018-03-15 12:20:54 TRACE EmployeeRepositoryJdbc:225 - Deleting employee token
+2018-03-15 12:20:54 TRACE ConnectionUtil:14 - Getting connection
+2018-03-15 12:20:54 TRACE EmployeeRepositoryJdbc:299 - true

@@ -184,22 +184,20 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 	@Override
 	public String getPasswordHash(Employee employee) {
 		logger.trace("Getting password hash");
-		try (Connection connection = ConnectionUtil.getConnection()) {
-			int parameterIndex = 0;
-			String sql = "SELECT U_PASSWORD FROM USER_T WHERE U_ID = ?";
-			
-			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setInt(++parameterIndex, employee.getId());
-
+		try(Connection connection = ConnectionUtil.getConnection()) {
+			int statementIndex = 0;
+			String command = "SELECT GET_HASH(?) AS HASH FROM DUAL";
+			PreparedStatement statement = connection.prepareStatement(command);
+			statement.setString(++statementIndex, employee.getPassword());
 			ResultSet result = statement.executeQuery();
-			
-			if (result.next()) {
-				return result.getString("U_PASSWORD");
+
+			if(result.next()) {
+				return result.getString("HASH");
 			}
 		} catch (SQLException e) {
-			logger.error("Exception thrown while getting password hash", e);
-		}
-		return null;
+			logger.warn("Exception getting customer hash", e);
+		} 
+		return new String();
 	}
 
 	@Override
@@ -282,7 +280,7 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 	
 	public static void main(String[] args) {
 		EmployeeRole er = new EmployeeRole(1, "EMPLOYEE");
-		Employee e = new Employee(100,"James","Kempf","jamesk4321","password1","example@gmail.com",er);
+		Employee e = new Employee(100,"James","Kempf","jamesk4321","p4ssw0rd","example@gmail.com",er);
 		EmployeeRepositoryJdbc repository = EmployeeRepositoryJdbc.getInstance();
 		
 //		logger.trace(repository.insert(e));
