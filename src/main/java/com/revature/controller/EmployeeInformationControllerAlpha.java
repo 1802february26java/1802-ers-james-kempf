@@ -25,7 +25,7 @@ public class EmployeeInformationControllerAlpha implements EmployeeInformationCo
 				return "/register.html";
 			} else {
 				if (loggedEmployee.getEmployeeRole().getId() == 2) {
-					Employee newEmployee = new Employee(
+					Employee employee = new Employee(
 							request.getParameter("firstname"),
 							request.getParameter("lastname"),
 							request.getParameter("username"),
@@ -33,8 +33,8 @@ public class EmployeeInformationControllerAlpha implements EmployeeInformationCo
 							request.getParameter("email"),
 							new EmployeeRole(Integer.parseInt(request.getParameter("employeeRoleID")))
 							);
-					if (!employeeService.isUsernameTaken(newEmployee)) {
-						if (employeeService.createEmployee(newEmployee)) {
+					if (!employeeService.isUsernameTaken(employee)) {
+						if (employeeService.createEmployee(employee)) {
 							return new ClientMessage("Registration successful");
 						}
 					} else {
@@ -49,8 +49,32 @@ public class EmployeeInformationControllerAlpha implements EmployeeInformationCo
 
 	@Override
 	public Object updateEmployee(HttpServletRequest request) {
-		// TODO Auto-generated method stub
-		return null;
+		Employee loggedEmployee = (Employee) request.getSession().getAttribute("employee");
+		if (loggedEmployee == null) {
+			return "/login.html";
+		} else if (loggedEmployee.getEmployeeRole().getId() != 2) {
+			return "/403.html";
+		} else {
+	 		logger.trace("Updating employee");
+			if (request.getMethod() == "GET") {
+				logger.trace("Update employee - GET");
+				return "/updateEmployee.html";
+			} else {
+				Employee employee = new Employee(
+						Integer.parseInt(request.getParameter("employeeID")),
+						request.getParameter("firstname"),
+						request.getParameter("lastname"),
+						request.getParameter("username"),
+						request.getParameter("password"),
+						request.getParameter("email"),
+						new EmployeeRole(Integer.parseInt(request.getParameter("employeeRoleID")))
+						);
+				if (employeeService.updateEmployeeInformation(employee)) {
+					return new ClientMessage("Update successful");
+				}
+			}
+		}
+		return "/login.html";
 	}
 
 	@Override
