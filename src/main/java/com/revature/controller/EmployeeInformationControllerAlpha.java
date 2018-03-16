@@ -17,70 +17,70 @@ public class EmployeeInformationControllerAlpha implements EmployeeInformationCo
 
 	@Override
 	public Object registerEmployee(HttpServletRequest request) {
+		logger.trace("registering employee");
 		Employee loggedEmployee = (Employee) request.getSession().getAttribute("employee");
-		if (loggedEmployee != null) {
-	 		logger.trace("registering employee");
-			if (request.getMethod() == "GET") {
-				logger.trace("registering employee - GET");
-				return "/register.html";
-			} else {
-				if (loggedEmployee.getEmployeeRole().getId() == 2) {
-					Employee employee = new Employee(
-							request.getParameter("firstname"),
-							request.getParameter("lastname"),
-							request.getParameter("username"),
-							request.getParameter("password"),
-							request.getParameter("email"),
-							new EmployeeRole(Integer.parseInt(request.getParameter("employeeRoleID")))
-							);
-					if (!employeeService.isUsernameTaken(employee)) {
-						if (employeeService.createEmployee(employee)) {
-							return new ClientMessage("Registration successful");
-						}
-					} else {
-						return new ClientMessage("Username is already taken");
-					}
+		if (loggedEmployee == null) {
+			return "/login.html";
+		} else if (request.getMethod() == "GET") {
+			return "/register.html";
+		} else if (loggedEmployee.getEmployeeRole().getId() == 2) {
+			Employee employee = new Employee(
+					request.getParameter("firstname"),
+					request.getParameter("lastname"),
+					request.getParameter("username"),
+					request.getParameter("password"),
+					request.getParameter("email"),
+					new EmployeeRole(Integer.parseInt(request.getParameter("employeeRoleID")))
+					);
+			if (!employeeService.isUsernameTaken(employee)) {
+				if (employeeService.createEmployee(employee)) {
+					return new ClientMessage("Registration successful");
 				}
-				return new ClientMessage("Registration failed");
+			} else {
+				return new ClientMessage("Username is already taken");
 			}
 		}
-		return "/login.html";
+		return new ClientMessage("Registration failed");
 	}
 
 	@Override
 	public Object updateEmployee(HttpServletRequest request) {
+ 		logger.trace("Updating employee");
 		Employee loggedEmployee = (Employee) request.getSession().getAttribute("employee");
 		if (loggedEmployee == null) {
 			return "/login.html";
 		} else if (loggedEmployee.getEmployeeRole().getId() != 2) {
 			return "/403.html";
+		} else if (request.getMethod() == "GET") {
+			return "/updateEmployee.html";
 		} else {
-	 		logger.trace("Updating employee");
-			if (request.getMethod() == "GET") {
-				logger.trace("Update employee - GET");
-				return "/updateEmployee.html";
-			} else {
-				Employee employee = new Employee(
-						Integer.parseInt(request.getParameter("employeeID")),
-						request.getParameter("firstname"),
-						request.getParameter("lastname"),
-						request.getParameter("username"),
-						request.getParameter("password"),
-						request.getParameter("email"),
-						new EmployeeRole(Integer.parseInt(request.getParameter("employeeRoleID")))
-						);
-				if (employeeService.updateEmployeeInformation(employee)) {
-					return new ClientMessage("Update successful");
-				}
+			Employee employee = new Employee(
+					Integer.parseInt(request.getParameter("employeeID")),
+					request.getParameter("firstname"),
+					request.getParameter("lastname"),
+					request.getParameter("username"),
+					request.getParameter("password"),
+					request.getParameter("email"),
+					new EmployeeRole(Integer.parseInt(request.getParameter("employeeRoleID")))
+					);
+			if (employeeService.updateEmployeeInformation(employee)) {
+				return new ClientMessage("Update successful");
 			}
 		}
-		return "/login.html";
+		return new ClientMessage("Update failed");
 	}
 
 	@Override
 	public Object viewEmployeeInformation(HttpServletRequest request) {
-		// TODO Auto-generated method stub
-		return null;
+		logger.trace("view employee information");
+		Employee loggedEmployee = (Employee) request.getSession().getAttribute("employee");
+		if (loggedEmployee == null) {
+			return "/login.html";
+		} else if (request.getMethod() == "GET") {
+			return "/employee.html";
+		} else {
+			return employeeService.getEmployeeInformation(loggedEmployee);
+		}
 	}
 
 	@Override
