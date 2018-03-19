@@ -83,14 +83,26 @@ public class EmployeeInformationControllerAlpha implements EmployeeInformationCo
 
 	@Override
 	public Object viewAllEmployees(HttpServletRequest request) {
-		// TODO Auto-generated method stub
-		return null;
+		logger.trace("View all employee information");
+		Employee loggedEmployee = (Employee) request.getSession().getAttribute("employee");
+		if (loggedEmployee == null) {
+			return "/login.html";
+		} else if (loggedEmployee.getEmployeeRole().getId() == 2) {
+			return employeeService.getAllEmployeesInformation();
+		} else {
+			return "/403.html";
+		}
 	}
 
 	@Override
 	public Object usernameExists(HttpServletRequest request) {
-		// TODO Auto-generated method stub
-		return null;
+		logger.trace("Checking if username is taken");
+		boolean taken = employeeService.isUsernameTaken(new Employee(request.getParameter("username")));
+		if (taken) {
+			return new ClientMessage("Username already exists");
+		} else {
+			return new ClientMessage("Username available");
+		}
 	}
 
 }

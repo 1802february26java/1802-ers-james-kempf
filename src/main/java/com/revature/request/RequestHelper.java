@@ -56,6 +56,10 @@ public class RequestHelper {
 			return new EmployeeInformationControllerAlpha().updateEmployee(request);
 		case "/ERS/employee/employeeInfo.do":
 			return new EmployeeInformationControllerAlpha().viewEmployeeInformation(request);
+		case "/ERS/employee/allEmployees.do":
+			return new EmployeeInformationControllerAlpha().viewAllEmployees(request);
+		case "/ERS/employee/usernameTaken.do":
+			return new EmployeeInformationControllerAlpha().usernameExists(request);
 		default:
 			return new ErrorControllerAlpha().showError(request);
 		}

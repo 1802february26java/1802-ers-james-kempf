@@ -69,7 +69,7 @@ public class EmployeeServiceAlpha implements EmployeeService {
 
 	@Override
 	public boolean isUsernameTaken(Employee employee) {
-		logger.trace("Checking if username taken");
+		logger.trace("Checking if username is taken");
 		boolean taken = (repository.select(employee.getUsername()) != null);
 		return taken;
 	}
