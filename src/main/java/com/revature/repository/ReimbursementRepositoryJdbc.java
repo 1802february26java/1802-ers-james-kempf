@@ -62,18 +62,17 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 		try (Connection connection = ConnectionUtil.getConnection()) {
 			int parameterIndex = 0;
 			String sql = "UPDATE REIMBURSEMENT "
-					+ "SET R_ID = ?, "
-					+ "R_REQUESTED = ?, "
+					+ "SET R_REQUESTED = ?, "
 					+ "R_RESOLVED = ?, "
 					+ "R_AMOUNT = ?, "
 					+ "R_DESCRIPTION = ?, "
 					+ "EMPLOYEE_ID = ?, "
 					+ "MANAGER_ID = ?, "
 					+ "RS_ID = ?, "
-					+ "RT_ID = ?"; 
+					+ "RT_ID = ? "
+					+ "WHERE R_ID = ?"; 
 
 			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setInt(++parameterIndex, reimbursement.getId());
 			statement.setTimestamp(++parameterIndex, Timestamp.valueOf(reimbursement.getRequested()));
 			if (reimbursement.getResolved() != null) {
 				statement.setTimestamp(++parameterIndex, Timestamp.valueOf(reimbursement.getResolved()));
@@ -90,6 +89,7 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 			}
 			statement.setInt(++parameterIndex, reimbursement.getStatus().getId());
 			statement.setInt(++parameterIndex, reimbursement.getType().getId());
+			statement.setInt(++parameterIndex, reimbursement.getId());
 
 			return (statement.executeUpdate() > 0);
 		} catch (SQLException e) {

@@ -105,8 +105,31 @@ public class ReimbursementControllerAlpha implements ReimbursementController {
 
 	@Override
 	public Object finalizeRequest(HttpServletRequest request) {
-		// TODO Auto-generated method stub
-		return null;
+		logger.trace("Finalizing request");
+		Employee loggedEmployee = (Employee) request.getSession().getAttribute("employee");
+		if (loggedEmployee == null) {
+			return "/login.html";
+		} else if (loggedEmployee.getEmployeeRole().getId() != 2) {
+			return "/403.html";
+		} else {
+			Reimbursement reimbursement = reimbursementService.getSingleRequest(
+					new Reimbursement(Integer.parseInt(request.getParameter("id")))
+					);
+			if (reimbursement == null) {
+				return new ClientMessage("Reimbursement not found");
+			} else {
+				System.out.println(reimbursement.toString());
+				reimbursement.setApprover(loggedEmployee);
+				reimbursement.setResolved(LocalDateTime.now());
+				reimbursement.setStatus(new ReimbursementStatus(Integer.parseInt(request.getParameter("status"))));
+				System.out.println(reimbursement.toString());
+				if (reimbursementService.finalizeRequest(reimbursement)) {
+					return new ClientMessage("Request finalized");
+				} else {
+					return new ClientMessage("Finalization failed");
+				}
+			}
+		}
 	}
 
 	@Override
