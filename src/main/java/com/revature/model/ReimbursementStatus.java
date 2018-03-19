@@ -27,6 +27,10 @@ public class ReimbursementStatus implements Serializable {
 
 	public ReimbursementStatus() {}
 	
+	public ReimbursementStatus(int id) {
+		this.id = id;
+	}
+	
 	public ReimbursementStatus(int id, String status) {
 		this.id = id;
 		this.status = status;

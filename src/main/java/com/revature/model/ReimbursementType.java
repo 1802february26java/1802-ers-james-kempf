@@ -25,6 +25,10 @@ public class ReimbursementType implements Serializable {
 	private String type;
 	
 	public ReimbursementType() {}
+	
+	public ReimbursementType(int id) {
+		this.id = id;
+	}
 
 	public ReimbursementType(int id, String type) {
 		this.id = id;
