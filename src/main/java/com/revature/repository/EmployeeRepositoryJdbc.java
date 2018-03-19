@@ -64,7 +64,6 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 					+ "U_FIRSTNAME = ?, "
 					+ "U_LASTNAME = ?, "
 					+ "U_USERNAME = ?, "
-					+ "U_PASSWORD = ?, "
 					+ "U_EMAIL = ?, "
 					+ "UR_ID = ? "
 					+ "WHERE U_ID = ?";
@@ -73,7 +72,6 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 			statement.setString(++parameterIndex, employee.getFirstName());
 			statement.setString(++parameterIndex, employee.getLastName());
 			statement.setString(++parameterIndex, employee.getUsername());
-			statement.setString(++parameterIndex, employee.getPassword());
 			statement.setString(++parameterIndex, employee.getEmail());
 			statement.setInt(++parameterIndex, employee.getEmployeeRole().getId());
 			
