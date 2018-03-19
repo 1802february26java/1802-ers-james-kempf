@@ -54,7 +54,7 @@ public class RequestHelper {
 			return new EmployeeInformationControllerAlpha().registerEmployee(request);
 		case "/ERS/employee/updateEmployee.do":
 			return new EmployeeInformationControllerAlpha().updateEmployee(request);
-		case "/ERS/employee/allEmployee.do":
+		case "/ERS/employee/employeeInfo.do":
 			return new EmployeeInformationControllerAlpha().viewEmployeeInformation(request);
 		default:
 			return new ErrorControllerAlpha().showError(request);

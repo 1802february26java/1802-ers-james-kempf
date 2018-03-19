@@ -72,12 +72,10 @@ public class EmployeeInformationControllerAlpha implements EmployeeInformationCo
 
 	@Override
 	public Object viewEmployeeInformation(HttpServletRequest request) {
-		logger.trace("view employee information");
+		logger.trace("View employee information");
 		Employee loggedEmployee = (Employee) request.getSession().getAttribute("employee");
 		if (loggedEmployee == null) {
 			return "/login.html";
-		} else if (request.getMethod() == "GET") {
-			return "/employee.html";
 		} else {
 			return employeeService.getEmployeeInformation(loggedEmployee);
 		}
