@@ -63,6 +63,8 @@ public class RequestHelper {
 			return new EmployeeInformationControllerAlpha().usernameExists(request);
 		case "/ERS/reimbursement/submitReimbursement.do":
 			return new ReimbursementControllerAlpha().submitRequest(request);
+		case "/ERS/reimbursement/selectReimbursement.do":
+			return new ReimbursementControllerAlpha().singleRequest(request);
 		default:
 			return new ErrorControllerAlpha().showError(request);
 		}

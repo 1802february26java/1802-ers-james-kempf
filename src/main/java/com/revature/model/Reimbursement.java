@@ -75,6 +75,11 @@ public class Reimbursement implements Serializable, Comparable<Reimbursement> {
 
 	public Reimbursement() {}
 	
+	public Reimbursement(int id) {
+		this.id = id;
+	}
+
+	
 	/**
 	 * It doesn't contain the receipt as a parameter.
 	 */

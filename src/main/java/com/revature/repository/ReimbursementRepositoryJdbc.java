@@ -33,17 +33,15 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 		logger.trace("Inserting new reimbursement");
 		try (Connection connection = ConnectionUtil.getConnection()) {
 			int parameterIndex = 0;
-			String sql = "INSERT INTO REIMBURSEMENT(R_ID, "
-					+ "R_REQUESTED, "
+			String sql = "INSERT INTO REIMBURSEMENT(R_REQUESTED, "
 					+ "R_AMOUNT,"
 					+ "R_DESCRIPTION, "
 					+ "EMPLOYEE_ID, "
 					+ "RS_ID, "
 					+ "RT_ID) "
-					+ "VALUES(?,?,?,?,?,?,?)";  
+					+ "VALUES(?,?,?,?,?,?)";  
 
 			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setInt(++parameterIndex, reimbursement.getId());
 			statement.setTimestamp(++parameterIndex, Timestamp.valueOf(reimbursement.getRequested()));
 			statement.setDouble(++parameterIndex, reimbursement.getAmount());
 			statement.setString(++parameterIndex, reimbursement.getDescription());

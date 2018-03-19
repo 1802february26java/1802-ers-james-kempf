@@ -49,8 +49,23 @@ public class ReimbursementControllerAlpha implements ReimbursementController {
 
 	@Override
 	public Object singleRequest(HttpServletRequest request) {
-		// TODO Auto-generated method stub
-		return null;
+		logger.trace("Getting single request");
+		Employee loggedEmployee = (Employee) request.getSession().getAttribute("employee");
+		if (loggedEmployee == null) {
+			return "/login.html";
+		} else {
+			Reimbursement reimbursement = reimbursementService.getSingleRequest(
+					new Reimbursement(Integer.parseInt(request.getParameter("id")))
+					);
+			if (reimbursement == null
+					|| (loggedEmployee.getEmployeeRole().getId() != 2
+							&& loggedEmployee.getId() != reimbursement.getRequester().getId()
+							)) {
+				return new ClientMessage("Reimbursement not found");
+			} else {
+				return reimbursement;
+			}
+		}
 	}
 
 	@Override
