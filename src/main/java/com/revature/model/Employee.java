@@ -53,6 +53,10 @@ public class Employee implements Serializable, Comparable<Employee> {
 
 	public Employee() {}
 	
+	public Employee(int id) {
+		this.id = id;
+	}
+	
 	public Employee(String username) {
 		this.username = username;
 	}

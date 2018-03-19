@@ -84,6 +84,13 @@ public class ReimbursementControllerAlpha implements ReimbursementController {
 			case "finalized":
 				reimbursements = reimbursementService.getUserFinalizedRequests(loggedEmployee);
 				break;
+			case "user":
+				if (loggedEmployee.getEmployeeRole().getId() == 2) {
+					Employee employee = new Employee(Integer.parseInt(request.getParameter("id")));
+					reimbursements = reimbursementService.getUserPendingRequests(employee);
+					reimbursements.addAll(reimbursementService.getUserFinalizedRequests(employee));
+				}
+				break;
 			case "allPending":
 				if (loggedEmployee.getEmployeeRole().getId() == 2) {
 					reimbursements = reimbursementService.getAllPendingRequests();
