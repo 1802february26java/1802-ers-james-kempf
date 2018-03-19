@@ -65,6 +65,8 @@ public class RequestHelper {
 			return new ReimbursementControllerAlpha().submitRequest(request);
 		case "/ERS/reimbursement/selectReimbursement.do":
 			return new ReimbursementControllerAlpha().singleRequest(request);
+		case "/ERS/reimbursement/selectMultipleReimbursement.do":
+			return new ReimbursementControllerAlpha().multipleRequests(request);
 		default:
 			return new ErrorControllerAlpha().showError(request);
 		}

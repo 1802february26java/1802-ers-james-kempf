@@ -1,6 +1,7 @@
 package com.revature.controller;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -70,8 +71,36 @@ public class ReimbursementControllerAlpha implements ReimbursementController {
 
 	@Override
 	public Object multipleRequests(HttpServletRequest request) {
-		// TODO Auto-generated method stub
-		return null;
+		logger.trace("Getting multiple request");
+		Employee loggedEmployee = (Employee) request.getSession().getAttribute("employee");
+		if (loggedEmployee == null) {
+			return "/login.html";
+		} else {
+			Set<Reimbursement> reimbursements = null;
+			switch (request.getParameter("list")) {
+			case "pending":
+				reimbursements = reimbursementService.getUserPendingRequests(loggedEmployee);
+				break;
+			case "finalized":
+				reimbursements = reimbursementService.getUserFinalizedRequests(loggedEmployee);
+				break;
+			case "allPending":
+				if (loggedEmployee.getEmployeeRole().getId() == 2) {
+					reimbursements = reimbursementService.getAllPendingRequests();
+				}
+				break;
+			case "allFinalized":
+				if (loggedEmployee.getEmployeeRole().getId() == 2) {
+					reimbursements = reimbursementService.getAllResolvedRequests();
+				}
+				break;
+			}
+			if (reimbursements == null) {
+				return new ClientMessage("Reimbursements not found");
+			} else {
+				return reimbursements;
+			}
+		}
 	}
 
 	@Override
