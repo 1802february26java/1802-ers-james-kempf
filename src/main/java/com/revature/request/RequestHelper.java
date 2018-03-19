@@ -69,6 +69,8 @@ public class RequestHelper {
 			return new ReimbursementControllerAlpha().multipleRequests(request);
 		case "/ERS/reimbursement/finalize.do":
 			return new ReimbursementControllerAlpha().finalizeRequest(request);
+		case "/ERS/reimbursement/types.do":
+			return new ReimbursementControllerAlpha().getRequestTypes(request);
 		default:
 			return new ErrorControllerAlpha().showError(request);
 		}

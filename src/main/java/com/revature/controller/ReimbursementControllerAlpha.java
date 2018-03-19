@@ -134,8 +134,14 @@ public class ReimbursementControllerAlpha implements ReimbursementController {
 
 	@Override
 	public Object getRequestTypes(HttpServletRequest request) {
-		// TODO Auto-generated method stub
-		return null;
+		logger.trace("Getting request types");
+		Employee loggedEmployee = (Employee) request.getSession().getAttribute("employee");
+		if (loggedEmployee == null) {
+			return "/login.html";
+		} else {
+			Set<ReimbursementType> types = reimbursementService.getReimbursementTypes();
+			return types;
+		}
 	}
 
 }
