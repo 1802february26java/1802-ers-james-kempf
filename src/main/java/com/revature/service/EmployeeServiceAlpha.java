@@ -36,6 +36,9 @@ public class EmployeeServiceAlpha implements EmployeeService {
 	public Employee getEmployeeInformation(Employee employee) {
 		logger.trace("Getting Employee Information");
 		Employee employeeInfo = repository.select(employee.getId());
+		if (employeeInfo == null) {
+			employeeInfo = repository.select(employee.getUsername());
+		}
 		return employeeInfo;
 	}
 

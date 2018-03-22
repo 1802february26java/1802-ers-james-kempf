@@ -133,6 +133,7 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 			ResultSet result = statement.executeQuery();
 			
 			if (result.next()) {
+				System.out.println("SUCCESS");
 				return new Employee(
 						result.getInt("U_ID"),
 						result.getString("U_FIRSTNAME"),
@@ -283,23 +284,23 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 	}
 	
 	public static void main(String[] args) {
-		EmployeeRole employeeRole = new EmployeeRole(2, "MANAGER");
-		Employee employee = new Employee(21,"James","Kempf","jamesk4321","p4ssw0rd","example@gmail.com",employeeRole);
-		EmployeeRepositoryJdbc repository = EmployeeRepositoryJdbc.getInstance();
-		
-		logger.trace(repository.insert(employee));
-		employee.setEmail("new.example@gmail.com");
-		logger.trace(repository.update(employee));
-		logger.trace(repository.select(employee.getId()).toString());
-		logger.trace(repository.select("jamesk4321").toString());
-		logger.trace(repository.selectAll());
-		logger.trace(repository.getPasswordHash(employee));
-		
-		EmployeeToken employeeToken = new EmployeeToken(employee.getId(), null, LocalDateTime.now(), employee);
-		String token = employeeToken.getRequester().getUsername() + Timestamp.valueOf(employeeToken.getCreationDate());
-		employeeToken.setToken(Integer.toString(token.hashCode()));
-		logger.trace(repository.insertEmployeeToken(employeeToken));
-		logger.trace(repository.selectEmployeeToken(employeeToken));
-		logger.trace(repository.deleteEmployeeToken(employeeToken));
+//		EmployeeRole employeeRole = new EmployeeRole(2, "MANAGER");
+//		Employee employee = new Employee(21,"James","Kempf","jamesk4321","p4ssw0rd","example@gmail.com",employeeRole);
+//		EmployeeRepositoryJdbc repository = EmployeeRepositoryJdbc.getInstance();
+//		
+//		logger.trace(repository.insert(employee));
+//		employee.setEmail("new.example@gmail.com");
+//		logger.trace(repository.update(employee));
+//		logger.trace(repository.select(employee.getId()).toString());
+//		logger.trace(repository.select("jamesk4321").toString());
+//		logger.trace(repository.selectAll());
+//		logger.trace(repository.getPasswordHash(employee));
+//		
+//		EmployeeToken employeeToken = new EmployeeToken(employee.getId(), null, LocalDateTime.now(), employee);
+//		String token = employeeToken.getRequester().getUsername() + Timestamp.valueOf(employeeToken.getCreationDate());
+//		employeeToken.setToken(Integer.toString(token.hashCode()));
+//		logger.trace(repository.insertEmployeeToken(employeeToken));
+//		logger.trace(repository.selectEmployeeToken(employeeToken));
+//		logger.trace(repository.deleteEmployeeToken(employeeToken));
 	}
 }

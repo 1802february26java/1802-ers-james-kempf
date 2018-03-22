@@ -1685,3 +1685,747 @@ java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint 
 2018-03-19 16:11:31 TRACE ReimbursementRepositoryJdbc:325 - Selecting types
 2018-03-19 16:11:31 TRACE ConnectionUtil:14 - Getting connection
 2018-03-19 16:11:32 TRACE ReimbursementRepositoryJdbc:362 - [ReimbursementType [id=1, type=OTHER], ReimbursementType [id=4, type=TRAVELING], ReimbursementType [id=2, type=COURSE], ReimbursementType [id=3, type=CERTIFICATION]]
+2018-03-22 13:37:28 TRACE EmployeeServiceAlpha:54 - Creating employee
+2018-03-22 13:37:28 TRACE EmployeeRepositoryJdbc:31 - Inserting new employee
+2018-03-22 13:37:28 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:32 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:37:32 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:37:32 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:33 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:37:33 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:34 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:37:34 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:37:34 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:35 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:37:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:35 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:37:35 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:37:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:35 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:37:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:35 TRACE EmployeeRepositoryJdbc:190 - Getting password hash
+2018-03-22 13:37:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:35 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:37:35 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:37:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:36 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:37:36 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:37:36 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:36 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:37:36 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:37:36 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:36 TRACE EmployeeServiceAlpha:68 - Updating password
+2018-03-22 13:37:36 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:37:36 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:36 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:37:36 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:37:36 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:36 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:37:36 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:37:36 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:37 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:37:37 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:37:37 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:37 TRACE EmployeeServiceAlpha:47 - Getting all employee information
+2018-03-22 13:37:37 TRACE EmployeeRepositoryJdbc:157 - Selecting all employees
+2018-03-22 13:37:37 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:37 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:37:37 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:37:37 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:37 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:37:37 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:37:37 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:37 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:37:37 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:37:37 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:38 TRACE EmployeeServiceAlpha:75 - Checking if username is taken
+2018-03-22 13:37:38 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:37:38 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:38 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:37:38 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:37:38 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:38 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:37:38 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:37:38 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:38 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:37:38 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:38 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:37:38 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:37:38 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:38 TRACE EmployeeServiceAlpha:75 - Checking if username is taken
+2018-03-22 13:37:38 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:37:38 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:38 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:37:38 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:37:38 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:38 TRACE EmployeeServiceAlpha:68 - Updating password
+2018-03-22 13:37:38 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:37:38 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:39 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:37:39 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:37:39 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:39 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:37:39 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:39 TRACE EmployeeRepositoryJdbc:190 - Getting password hash
+2018-03-22 13:37:39 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:37:39 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:37:39 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:37:39 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:22 TRACE EmployeeServiceAlpha:54 - Creating employee
+2018-03-22 13:44:22 TRACE EmployeeRepositoryJdbc:31 - Inserting new employee
+2018-03-22 13:44:22 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:23 ERROR EmployeeRepositoryJdbc:53 - Exception thrown while inserting new employee
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (REIMBURSEMENT_DB.UNQ_USERNAME) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.insert(EmployeeRepositoryJdbc.java:51)
+	at com.revature.service.EmployeeServiceAlpha.createEmployee(EmployeeServiceAlpha.java:55)
+	at EmployeeTests.registerUser(EmployeeTests.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-22 13:44:23 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:44:23 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:44:23 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:23 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:44:23 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:23 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:44:23 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:44:23 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:23 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:44:23 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:23 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:44:23 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:44:23 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:23 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:44:23 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:23 TRACE EmployeeRepositoryJdbc:190 - Getting password hash
+2018-03-22 13:44:23 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:24 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:44:24 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:44:24 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:24 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:44:24 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:44:24 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:24 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:44:24 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:44:24 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:24 TRACE EmployeeServiceAlpha:68 - Updating password
+2018-03-22 13:44:24 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:44:24 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:24 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:44:24 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:44:24 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:24 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:44:24 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:44:24 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:24 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:44:24 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:44:24 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:25 TRACE EmployeeServiceAlpha:47 - Getting all employee information
+2018-03-22 13:44:25 TRACE EmployeeRepositoryJdbc:157 - Selecting all employees
+2018-03-22 13:44:25 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:25 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:44:25 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:44:25 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:25 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:44:25 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:44:25 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:25 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:44:25 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:44:25 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:25 TRACE EmployeeServiceAlpha:75 - Checking if username is taken
+2018-03-22 13:44:25 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:44:25 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:25 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:44:25 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:44:25 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:25 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:44:25 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:44:25 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:25 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:44:25 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:26 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:44:26 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:44:26 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:26 TRACE EmployeeServiceAlpha:75 - Checking if username is taken
+2018-03-22 13:44:26 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:44:26 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:26 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:44:26 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:44:26 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:26 TRACE EmployeeServiceAlpha:68 - Updating password
+2018-03-22 13:44:26 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:44:26 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:26 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:44:26 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:44:26 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:26 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:44:26 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:26 TRACE EmployeeRepositoryJdbc:190 - Getting password hash
+2018-03-22 13:44:26 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:44:26 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:44:26 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:44:26 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:38 TRACE EmployeeServiceAlpha:54 - Creating employee
+2018-03-22 13:46:38 TRACE EmployeeRepositoryJdbc:31 - Inserting new employee
+2018-03-22 13:46:38 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:39 ERROR EmployeeRepositoryJdbc:53 - Exception thrown while inserting new employee
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (REIMBURSEMENT_DB.UNQ_USERNAME) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.insert(EmployeeRepositoryJdbc.java:51)
+	at com.revature.service.EmployeeServiceAlpha.createEmployee(EmployeeServiceAlpha.java:55)
+	at EmployeeTests.registerUser(EmployeeTests.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-22 13:46:39 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:46:39 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:46:39 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:39 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:46:39 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:39 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:46:39 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:46:39 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:39 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:46:39 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:39 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:46:39 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:39 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:39 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:46:39 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:39 TRACE EmployeeRepositoryJdbc:190 - Getting password hash
+2018-03-22 13:46:39 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:39 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:46:39 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:39 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:40 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:46:40 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:46:40 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:40 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:46:40 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:40 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:40 TRACE EmployeeServiceAlpha:68 - Updating password
+2018-03-22 13:46:40 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:40 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:40 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:46:40 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:40 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:40 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:46:40 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:40 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:40 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:46:40 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:40 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:40 TRACE EmployeeServiceAlpha:47 - Getting all employee information
+2018-03-22 13:46:40 TRACE EmployeeRepositoryJdbc:157 - Selecting all employees
+2018-03-22 13:46:40 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:40 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:46:40 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:40 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:41 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:46:41 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:41 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:41 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:46:41 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:41 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:41 TRACE EmployeeServiceAlpha:75 - Checking if username is taken
+2018-03-22 13:46:41 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:46:41 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:41 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:46:41 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:41 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:41 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:46:41 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:46:41 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:41 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:46:41 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:41 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:46:41 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:41 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:41 TRACE EmployeeServiceAlpha:75 - Checking if username is taken
+2018-03-22 13:46:41 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:46:41 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:42 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:46:42 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:42 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:42 TRACE EmployeeServiceAlpha:68 - Updating password
+2018-03-22 13:46:42 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:42 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:42 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:46:42 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:42 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:42 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:46:42 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:42 TRACE EmployeeRepositoryJdbc:190 - Getting password hash
+2018-03-22 13:46:42 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:42 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:46:42 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:42 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:57 TRACE EmployeeServiceAlpha:54 - Creating employee
+2018-03-22 13:46:57 TRACE EmployeeRepositoryJdbc:31 - Inserting new employee
+2018-03-22 13:46:57 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:58 ERROR EmployeeRepositoryJdbc:53 - Exception thrown while inserting new employee
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (REIMBURSEMENT_DB.UNQ_USERNAME) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.insert(EmployeeRepositoryJdbc.java:51)
+	at com.revature.service.EmployeeServiceAlpha.createEmployee(EmployeeServiceAlpha.java:55)
+	at EmployeeTests.registerUser(EmployeeTests.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-22 13:46:58 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:46:58 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:46:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:58 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:46:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:58 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:46:58 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:46:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:58 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:46:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:58 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:46:58 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:58 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:46:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:58 TRACE EmployeeRepositoryJdbc:190 - Getting password hash
+2018-03-22 13:46:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:59 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:46:59 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:59 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:59 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:46:59 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:46:59 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:59 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:46:59 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:59 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:59 TRACE EmployeeServiceAlpha:68 - Updating password
+2018-03-22 13:46:59 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:59 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:59 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:46:59 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:59 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:59 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:46:59 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:59 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:46:59 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:46:59 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:46:59 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:47:00 TRACE EmployeeServiceAlpha:47 - Getting all employee information
+2018-03-22 13:47:00 TRACE EmployeeRepositoryJdbc:157 - Selecting all employees
+2018-03-22 13:47:00 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:47:00 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:47:00 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:47:00 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:47:00 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:47:00 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:47:00 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:47:00 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:47:00 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:47:00 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:47:00 TRACE EmployeeServiceAlpha:75 - Checking if username is taken
+2018-03-22 13:47:00 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:47:00 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:47:00 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:47:00 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:47:00 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:47:01 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:47:01 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:47:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:47:01 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:47:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:47:01 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:47:01 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:47:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:47:01 TRACE EmployeeServiceAlpha:75 - Checking if username is taken
+2018-03-22 13:47:01 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:47:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:47:01 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:47:01 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:47:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:47:01 TRACE EmployeeServiceAlpha:68 - Updating password
+2018-03-22 13:47:01 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:47:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:47:01 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:47:01 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:47:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:47:01 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:47:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:47:02 TRACE EmployeeRepositoryJdbc:190 - Getting password hash
+2018-03-22 13:47:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:47:02 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:47:02 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:47:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:51:15 TRACE EmployeeServiceAlpha:54 - Creating employee
+2018-03-22 13:51:15 TRACE EmployeeRepositoryJdbc:31 - Inserting new employee
+2018-03-22 13:51:15 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:51:17 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:51:17 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:51:17 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:51:17 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:51:17 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:51:17 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:51:17 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:51:17 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:51:17 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:51:17 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:51:17 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:51:17 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:51:17 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:51:57 TRACE EmployeeServiceAlpha:54 - Creating employee
+2018-03-22 13:51:57 TRACE EmployeeRepositoryJdbc:31 - Inserting new employee
+2018-03-22 13:51:57 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:51:58 ERROR EmployeeRepositoryJdbc:53 - Exception thrown while inserting new employee
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (REIMBURSEMENT_DB.UNQ_USERNAME) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.insert(EmployeeRepositoryJdbc.java:51)
+	at com.revature.service.EmployeeServiceAlpha.createEmployee(EmployeeServiceAlpha.java:55)
+	at EmployeeTests.registerUser(EmployeeTests.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-22 13:51:58 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:51:58 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:51:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:51:58 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:51:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:51:58 TRACE EmployeeServiceAlpha:75 - Checking if username is taken
+2018-03-22 13:51:58 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:51:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:51:58 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:51:58 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:51:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:51:58 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:51:58 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:51:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:51:59 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:51:59 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:51:59 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:51:59 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:51:59 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:30 TRACE EmployeeServiceAlpha:54 - Creating employee
+2018-03-22 13:52:30 TRACE EmployeeRepositoryJdbc:31 - Inserting new employee
+2018-03-22 13:52:30 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:31 ERROR EmployeeRepositoryJdbc:53 - Exception thrown while inserting new employee
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (REIMBURSEMENT_DB.UNQ_USERNAME) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.EmployeeRepositoryJdbc.insert(EmployeeRepositoryJdbc.java:51)
+	at com.revature.service.EmployeeServiceAlpha.createEmployee(EmployeeServiceAlpha.java:55)
+	at EmployeeTests.registerUser(EmployeeTests.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-22 13:52:31 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:52:31 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:52:31 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:32 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:52:32 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:32 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:52:32 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:52:32 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:32 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:52:32 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:32 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:52:32 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:52:32 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:32 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:52:32 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:32 TRACE EmployeeRepositoryJdbc:191 - Getting password hash
+2018-03-22 13:52:32 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:33 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:52:33 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:52:33 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:33 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:52:33 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:52:33 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:33 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:52:33 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:52:33 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:33 TRACE EmployeeServiceAlpha:68 - Updating password
+2018-03-22 13:52:33 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:52:33 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:33 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:52:33 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:52:33 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:33 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:52:33 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:52:33 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:34 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:52:34 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:52:34 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:34 TRACE EmployeeServiceAlpha:47 - Getting all employee information
+2018-03-22 13:52:34 TRACE EmployeeRepositoryJdbc:158 - Selecting all employees
+2018-03-22 13:52:34 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:34 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:52:34 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:52:34 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:34 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:52:34 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:52:34 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:34 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:52:34 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:52:34 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:34 TRACE EmployeeServiceAlpha:75 - Checking if username is taken
+2018-03-22 13:52:34 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:52:34 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:34 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:52:34 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:52:34 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:35 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 13:52:35 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 13:52:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:35 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:52:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:35 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:52:35 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:52:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:35 TRACE EmployeeServiceAlpha:75 - Checking if username is taken
+2018-03-22 13:52:35 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:52:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:35 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:52:35 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:52:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:35 TRACE EmployeeServiceAlpha:68 - Updating password
+2018-03-22 13:52:35 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:52:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:35 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:52:35 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:52:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:35 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:52:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:35 TRACE EmployeeRepositoryJdbc:191 - Getting password hash
+2018-03-22 13:52:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:52:36 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 13:52:36 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 13:52:36 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:57:48 TRACE ReimbursementRepositoryJdbc:61 - Updating reimbursement
+2018-03-22 13:57:48 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:57:49 TRACE ReimbursementRepositoryJdbc:356 - false
+2018-03-22 13:57:49 TRACE ReimbursementRepositoryJdbc:103 - Selecting reimbursement
+2018-03-22 13:57:49 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:57:49 TRACE ReimbursementRepositoryJdbc:357 - 
+2018-03-22 13:57:49 TRACE ReimbursementRepositoryJdbc:148 - Selecting pending reimbursement
+2018-03-22 13:57:49 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:57:49 TRACE ReimbursementRepositoryJdbc:358 - []
+2018-03-22 13:57:49 TRACE ReimbursementRepositoryJdbc:193 - Selecting finalized reimbursement
+2018-03-22 13:57:49 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:57:49 TRACE ReimbursementRepositoryJdbc:359 - []
+2018-03-22 13:57:49 TRACE ReimbursementRepositoryJdbc:238 - Selecting all pending reimbursement
+2018-03-22 13:57:49 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:57:53 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:57:53 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 13:58:14 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 13:58:14 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:00:58 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 14:00:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:32 TRACE EmployeeServiceAlpha:54 - Creating employee
+2018-03-22 14:02:32 TRACE EmployeeRepositoryJdbc:31 - Inserting new employee
+2018-03-22 14:02:32 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:33 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 14:02:33 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 14:02:33 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:34 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 14:02:34 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:34 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 14:02:34 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 14:02:34 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:34 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 14:02:34 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:34 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 14:02:34 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 14:02:34 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:34 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 14:02:34 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:34 TRACE EmployeeRepositoryJdbc:191 - Getting password hash
+2018-03-22 14:02:34 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:34 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 14:02:34 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 14:02:34 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:35 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 14:02:35 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 14:02:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:35 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 14:02:35 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 14:02:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:35 TRACE EmployeeServiceAlpha:68 - Updating password
+2018-03-22 14:02:35 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 14:02:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:35 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 14:02:35 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 14:02:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:35 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 14:02:35 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 14:02:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:35 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 14:02:35 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 14:02:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:35 TRACE EmployeeServiceAlpha:47 - Getting all employee information
+2018-03-22 14:02:35 TRACE EmployeeRepositoryJdbc:158 - Selecting all employees
+2018-03-22 14:02:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:35 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 14:02:35 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 14:02:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:36 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 14:02:36 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 14:02:36 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:36 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 14:02:36 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 14:02:36 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:36 TRACE EmployeeServiceAlpha:75 - Checking if username is taken
+2018-03-22 14:02:36 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 14:02:36 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:36 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 14:02:36 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 14:02:36 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:36 TRACE EmployeeServiceAlpha:37 - Getting Employee Information
+2018-03-22 14:02:36 TRACE EmployeeRepositoryJdbc:89 - Selecting employee
+2018-03-22 14:02:36 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:36 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 14:02:36 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:36 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 14:02:36 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 14:02:36 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:36 TRACE EmployeeServiceAlpha:75 - Checking if username is taken
+2018-03-22 14:02:36 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 14:02:36 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:37 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 14:02:37 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 14:02:37 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:37 TRACE EmployeeServiceAlpha:68 - Updating password
+2018-03-22 14:02:37 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 14:02:37 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:37 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 14:02:37 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 14:02:37 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:37 TRACE EmployeeRepositoryJdbc:123 - Selecting employee
+2018-03-22 14:02:37 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:37 TRACE EmployeeRepositoryJdbc:191 - Getting password hash
+2018-03-22 14:02:37 TRACE ConnectionUtil:14 - Getting connection
+2018-03-22 14:02:37 TRACE EmployeeServiceAlpha:61 - Updating employee
+2018-03-22 14:02:37 TRACE EmployeeRepositoryJdbc:60 - Updating employee
+2018-03-22 14:02:37 TRACE ConnectionUtil:14 - Getting connection
