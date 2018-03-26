@@ -51,25 +51,25 @@ public class RequestHelper {
 			return new LoginControllerAlpha().logout(request);
 		case "/ERS/home.do":
 			return new HomeControllerAlpha().showEmployeeHome(request);
-		case "/ERS/employee/register.do":
+		case "/ERS/register.do":
 			return new EmployeeInformationControllerAlpha().registerEmployee(request);
-		case "/ERS/employee/updateEmployee.do":
+		case "/ERS/update-employee.do":
 			return new EmployeeInformationControllerAlpha().updateEmployee(request);
-		case "/ERS/employee/employeeInfo.do":
+		case "/ERS/employeeInfo.do":
 			return new EmployeeInformationControllerAlpha().viewEmployeeInformation(request);
-		case "/ERS/employee/allEmployees.do":
+		case "/ERS/list-employees.do":
 			return new EmployeeInformationControllerAlpha().viewAllEmployees(request);
-		case "/ERS/employee/usernameTaken.do":
+		case "/ERS/usernameTaken.do":
 			return new EmployeeInformationControllerAlpha().usernameExists(request);
-		case "/ERS/reimbursement/submitReimbursement.do":
+		case "/ERS/submitReimbursement.do":
 			return new ReimbursementControllerAlpha().submitRequest(request);
-		case "/ERS/reimbursement/selectReimbursement.do":
+		case "/ERS/selectReimbursement.do":
 			return new ReimbursementControllerAlpha().singleRequest(request);
-		case "/ERS/reimbursement/selectMultipleReimbursement.do":
+		case "/ERS/selectMultipleReimbursement.do":
 			return new ReimbursementControllerAlpha().multipleRequests(request);
-		case "/ERS/reimbursement/finalize.do":
+		case "/ERS/finalize.do":
 			return new ReimbursementControllerAlpha().finalizeRequest(request);
-		case "/ERS/reimbursement/types.do":
+		case "/ERS/types.do":
 			return new ReimbursementControllerAlpha().getRequestTypes(request);
 		default:
 			return new ErrorControllerAlpha().showError(request);
