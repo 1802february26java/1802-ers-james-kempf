@@ -55,17 +55,17 @@ public class RequestHelper {
 			return new EmployeeInformationControllerAlpha().registerEmployee(request);
 		case "/ERS/update-employee.do":
 			return new EmployeeInformationControllerAlpha().updateEmployee(request);
-		case "/ERS/employeeInfo.do":
+		case "/ERS/employee-info.do":
 			return new EmployeeInformationControllerAlpha().viewEmployeeInformation(request);
 		case "/ERS/list-employees.do":
 			return new EmployeeInformationControllerAlpha().viewAllEmployees(request);
-		case "/ERS/usernameTaken.do":
+		case "/ERS/username-taken.do":
 			return new EmployeeInformationControllerAlpha().usernameExists(request);
-		case "/ERS/submitReimbursement.do":
+		case "/ERS/submit-reimbursement.do":
 			return new ReimbursementControllerAlpha().submitRequest(request);
-		case "/ERS/selectReimbursement.do":
+		case "/ERS/select-reimbursement.do":
 			return new ReimbursementControllerAlpha().singleRequest(request);
-		case "/ERS/selectMultipleReimbursement.do":
+		case "/ERS/select-multiple-reimbursement.do":
 			return new ReimbursementControllerAlpha().multipleRequests(request);
 		case "/ERS/finalize.do":
 			return new ReimbursementControllerAlpha().finalizeRequest(request);

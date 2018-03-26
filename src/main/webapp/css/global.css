@@ -1,30 +1,30 @@
 a {
     cursor: pointer;
 }
-
 .navbar-default {
-    background-color: black;
+    background-color: #014983;
 }
-
 .navbar-default .navbar-brand {
     color: white;
 }
-
-.navbar-default .navbar-brand:hover {
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav > li > a:hover {
     color: #d2d2d2;
 }
-
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
 .btn-block {
     width: 50%;
     margin: auto auto 10px;
 }
-
 .form-control {
     width: 50%;
     margin: 10px auto 10px auto;
     text-align: center;
 }
-
 .panel-default .panel-heading {
     text-align: center;
+}
+#message {
+    
 }

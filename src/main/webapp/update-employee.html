@@ -1,10 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Update Employee</title>
+    <title>Update Information</title>
+
+    <link rel="icon" href="images/customer.ico" />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       
+    <!-- Boostrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    
+    <!-- Boostrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="css/global.css" />
 </head>
 <body>
-	<h1>Update Employee</h1>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="home.do" class="navbar-brand"><strong id="usernameTitle">Home</strong></a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="nav-item"><a href="update-employee.do"><strong>Update Information</strong></a></li>
+                <li class="nav-item"><a href="reimbursements.do"><strong>Reimbursements</strong></a></li>
+                <li class="nav-item"><a href="list-employees.do"><strong>List Employees</strong></a></li>
+                <li class="nav-item"><a href="register.do"><strong>Register Employee</strong></a></li>
+            </ul>
+            <div class="nav navbar-nav navbar-right">
+                <a href="logout.do" class="navbar-brand"><strong><small>Logout</small></strong></a>
+            </div>
+        </div>
+    </nav>
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>Information</h3>
+            </div>
+            <div class="form-group">
+                <input id="firstName" name="firstName" placeholder="First name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input id="lastName" name="lastName" placeholder="Last name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input id="username" name="username" placeholder="Username" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input id="password" name="password" placeholder="Password" type="password" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input id="repeatPassword" placeholder="Repeat password" type="password" class="form-control" />
+            </div>
+            <!-- <div class="form-group">
+                <select name="role" class="form-control">
+                    <option value="1" selected disabled>Employee Role</option>
+                    <option value="1">Employee</option>
+                    <option value="2">Manager</option>
+                </select>
+            </div> -->
+            <div class="form-group">
+                <input id="email" name="email" placeholder="Email" class="form-control" />
+            </div>
+            <div id="message"></div>
+                <button id="submit" class="btn btn-md btn-success btn-block">Submit</button>
+            <div class="panel-footer">
+            </div>
+        </div>
+    </div>
+    <script src="js/update-employee.js"></script>
 </body>
 </html>

@@ -60,18 +60,33 @@ public class EmployeeRepositoryJdbc implements EmployeeRepository {
 		logger.trace("Updating employee");
 		try (Connection connection = ConnectionUtil.getConnection()) {
 			int parameterIndex = 0;
-			String sql = "UPDATE USER_T SET "
-					+ "U_FIRSTNAME = ?, "
-					+ "U_LASTNAME = ?, "
-					+ "U_USERNAME = ?, "
-					+ "U_EMAIL = ?, "
-					+ "UR_ID = ? "
-					+ "WHERE U_ID = ?";
+			String sql = "";
+			if (employee.getPassword() != null) {
+				sql = "UPDATE USER_T SET "
+						+ "U_FIRSTNAME = ?, "
+						+ "U_LASTNAME = ?, "
+						+ "U_USERNAME = ?, "
+						+ "U_PASSWORD = ?, "
+						+ "U_EMAIL = ?, "
+						+ "UR_ID = ? "
+						+ "WHERE U_ID = ?";
+			} else {
+				sql = "UPDATE USER_T SET "
+						+ "U_FIRSTNAME = ?, "
+						+ "U_LASTNAME = ?, "
+						+ "U_USERNAME = ?, "
+						+ "U_EMAIL = ?, "
+						+ "UR_ID = ? "
+						+ "WHERE U_ID = ?";
+			}
 
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setString(++parameterIndex, employee.getFirstName());
 			statement.setString(++parameterIndex, employee.getLastName());
 			statement.setString(++parameterIndex, employee.getUsername());
+			if (employee.getPassword() != null) {
+				statement.setString(++parameterIndex, repository.getPasswordHash(employee));
+			}
 			statement.setString(++parameterIndex, employee.getEmail());
 			statement.setInt(++parameterIndex, employee.getEmployeeRole().getId());
 			

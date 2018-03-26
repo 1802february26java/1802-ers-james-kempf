@@ -20,9 +20,9 @@ public class EmployeeInformationControllerAlpha implements EmployeeInformationCo
 		logger.trace("registering employee");
 		Employee loggedEmployee = (Employee) request.getSession().getAttribute("employee");
 		if (loggedEmployee == null) {
-			return "/login.html";
+			return "login.html";
 		} else if (request.getMethod() == "GET") {
-			return "/register.html";
+			return "register.html";
 		} else if (loggedEmployee.getEmployeeRole().getId() == 2) {
 			Employee employee = new Employee(
 					request.getParameter("firstname"),
@@ -48,18 +48,38 @@ public class EmployeeInformationControllerAlpha implements EmployeeInformationCo
  		logger.trace("Updating employee");
 		Employee loggedEmployee = (Employee) request.getSession().getAttribute("employee");
 		if (loggedEmployee == null) {
-			return "/login.html";
+			return "login.html";
 		} else if (request.getMethod() == "GET") {
-			return "/updateEmployee.html";
+			return "update-employee.html";
 		} else {
-			logger.trace(request.getParameter("Nothing"));
+			logger.trace(loggedEmployee.toString());
+			String firstName = request.getParameter("firstName");
+			String lastName = request.getParameter("lastName");
+			String username = request.getParameter("username");
+			String password = request.getParameter("password");
+			String email = request.getParameter("email");
+			if (firstName == "") {
+				firstName = loggedEmployee.getFirstName();
+			}
+			if (lastName == "") {
+				lastName = loggedEmployee.getLastName();
+			}
+			if (username == "") {
+				username = loggedEmployee.getUsername();
+			}
+			if (password == "") {
+				password = null;
+			}
+			if (email == "") {
+				email = loggedEmployee.getEmail();
+			}
 			Employee employee = new Employee(
 					loggedEmployee.getId(),
-					request.getParameter("firstname"),
-					request.getParameter("lastname"),
-					request.getParameter("username"),
-					"",
-					request.getParameter("email"),
+					firstName,
+					lastName,
+					username,
+					password,
+					email,
 					loggedEmployee.getEmployeeRole()
 					);
 			if (employeeService.updateEmployeeInformation(employee)) {
@@ -74,7 +94,7 @@ public class EmployeeInformationControllerAlpha implements EmployeeInformationCo
 		logger.trace("View employee information");
 		Employee loggedEmployee = (Employee) request.getSession().getAttribute("employee");
 		if (loggedEmployee == null) {
-			return "/login.html";
+			return "login.html";
 		} else {
 			return employeeService.getEmployeeInformation(loggedEmployee);
 		}
@@ -85,11 +105,11 @@ public class EmployeeInformationControllerAlpha implements EmployeeInformationCo
 		logger.trace("View all employee information");
 		Employee loggedEmployee = (Employee) request.getSession().getAttribute("employee");
 		if (loggedEmployee == null) {
-			return "/login.html";
+			return "login.html";
 		} else if (loggedEmployee.getEmployeeRole().getId() == 2) {
 			return employeeService.getAllEmployeesInformation();
 		} else {
-			return "/403.html";
+			return "403.html";
 		}
 	}
 
