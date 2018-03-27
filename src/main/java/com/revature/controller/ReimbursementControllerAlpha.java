@@ -25,9 +25,9 @@ public class ReimbursementControllerAlpha implements ReimbursementController {
 		logger.trace("Submiting Request");
 		Employee loggedEmployee = (Employee) request.getSession().getAttribute("employee");
 		if (loggedEmployee == null) {
-			return "/login.html";
+			return "login.html";
 		} else if (request.getMethod() == "GET") {
-			return  "/submitReimbursement.html";
+			return  "submit-reimbursement.html";
 		} else {
 			logger.trace(loggedEmployee.toString());
 			Reimbursement reimbursement = new Reimbursement(
@@ -42,10 +42,10 @@ public class ReimbursementControllerAlpha implements ReimbursementController {
 					new ReimbursementType(Integer.parseInt(request.getParameter("type")))
 					);
 			if (reimbursementService.submitRequest(reimbursement)) {
-				return new ClientMessage("Sumbission successful");
+				return new ClientMessage("Submission successful", true);
 			}
 		}
-		return new ClientMessage("Submission failed");
+		return new ClientMessage("Submission failed", false);
 	}
 
 	@Override
@@ -62,7 +62,7 @@ public class ReimbursementControllerAlpha implements ReimbursementController {
 					|| (loggedEmployee.getEmployeeRole().getId() != 2
 							&& loggedEmployee.getId() != reimbursement.getRequester().getId()
 							)) {
-				return new ClientMessage("Reimbursement not found");
+				return new ClientMessage("Reimbursement not found", false);
 			} else {
 				return reimbursement;
 			}
@@ -107,7 +107,7 @@ public class ReimbursementControllerAlpha implements ReimbursementController {
 				break;
 			}
 			if (reimbursements == null) {
-				return new ClientMessage("Reimbursements not found");
+				return new ClientMessage("Reimbursements not found", false);
 			} else {
 				return reimbursements;
 			}
@@ -127,7 +127,7 @@ public class ReimbursementControllerAlpha implements ReimbursementController {
 					new Reimbursement(Integer.parseInt(request.getParameter("id")))
 					);
 			if (reimbursement == null) {
-				return new ClientMessage("Reimbursement not found");
+				return new ClientMessage("Reimbursement not found", false);
 			} else {
 				System.out.println(reimbursement.toString());
 				reimbursement.setApprover(loggedEmployee);
@@ -135,9 +135,9 @@ public class ReimbursementControllerAlpha implements ReimbursementController {
 				reimbursement.setStatus(new ReimbursementStatus(Integer.parseInt(request.getParameter("status"))));
 				System.out.println(reimbursement.toString());
 				if (reimbursementService.finalizeRequest(reimbursement)) {
-					return new ClientMessage("Request finalized");
+					return new ClientMessage("Request finalized", true);
 				} else {
-					return new ClientMessage("Finalization failed");
+					return new ClientMessage("Finalization failed", false);
 				}
 			}
 		}

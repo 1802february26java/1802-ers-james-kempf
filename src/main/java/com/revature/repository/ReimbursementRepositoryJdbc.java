@@ -324,7 +324,7 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 	public Set<ReimbursementType> selectTypes() {
 		logger.trace("Selecting types");
 		try (Connection connection = ConnectionUtil.getConnection()) {
-			String sql = "SELECT * FROM REIMBURSEMENT_TYPE";
+			String sql = "SELECT * FROM REIMBURSEMENT_TYPE ORDER BY RT_ID";
 
 			PreparedStatement statement = connection.prepareStatement(sql);
 
