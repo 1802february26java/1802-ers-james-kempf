@@ -15,8 +15,8 @@ public class HomeControllerAlpha implements HomeController {
 		logger.trace("Showing employee home");
 		Employee employee = (Employee) request.getSession().getAttribute("employee");
 		if (employee != null) {
-			logger.trace("Showing home");
-			return "home.html";
+			logger.trace("Showing home for: " + employee.toString());
+			return (employee.getEmployeeRole().getId() == 2 ? "home-manager.html" : "home.html");
 		} else {
 			logger.trace("Sending back to login");
 			return "login.html";

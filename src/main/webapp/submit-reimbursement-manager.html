@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home</title>
+    <title>Submit Reimbursement</title>
 
     <link rel="icon" href="images/customer.ico" />
 
@@ -34,44 +34,28 @@
             </div>
         </div>
     </nav>
-    <div class="col-md-10 col-md-offset-1">
+    <div class="col-md-4 col-md-offset-4">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3>Information</h3>
+                <h3>Submit Reimbursement</h3>
             </div>
-            <table id="informationTable" class="table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Userame</th>
-                        <th>Email</th>
-                        <th>Role</th>
-                    </tr>
-                </thead>
-            </table>
+            <div class="form-group">
+                <input id="amount" name="amount" placeholder="Amount" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input id="description" name="description" placeholder="Desciption" class="form-control" />
+            </div>
+            <div class="form-group">
+                <select id="type" name="type" class="form-control">
+                    <option selected disabled>Type</option>
+                </select>
+            </div>
+            <div id="message"></div>
+            <button id="submit" class="btn btn-md btn-success btn-block">Submit</button>
+            <div class="panel-footer">
+            </div>
         </div>
     </div>
-    <div class="col-md-10 col-md-offset-1">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3>Reimbursements</h3>
-            </div>
-            <table id="reimbursementTable" class="table">
-                <thead>
-                    <tr>
-                        <th>Requester</th>
-                        <th>Amount</th>
-                        <th>Description</th>
-                        <th>Status</th>
-                        <th>Approver</th>
-                        <th>Requested</th>
-                        <th>Resolved</th>
-                    </tr>
-                </thead>
-            </table>
-        </div>
-    </div>
-    <script src="js/home.js"></script>
+    <script src="js/submit-reimbursement.js"></script>
 </body>
 </html>

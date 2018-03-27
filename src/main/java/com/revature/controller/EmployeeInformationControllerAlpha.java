@@ -21,9 +21,11 @@ public class EmployeeInformationControllerAlpha implements EmployeeInformationCo
 		Employee loggedEmployee = (Employee) request.getSession().getAttribute("employee");
 		if (loggedEmployee == null) {
 			return "login.html";
+		} else if (loggedEmployee.getEmployeeRole().getId() != 2) {
+			return "403.html";
 		} else if (request.getMethod() == "GET") {
 			return "register.html";
-		} else if (loggedEmployee.getEmployeeRole().getId() == 2) {
+		} else {
 			Employee employee = new Employee(
 					request.getParameter("firstname"),
 					request.getParameter("lastname"),

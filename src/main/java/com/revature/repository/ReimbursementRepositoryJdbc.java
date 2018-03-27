@@ -152,7 +152,8 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 					+ "ON R.RS_ID = RS.RS_ID "
 					+ "INNER JOIN REIMBURSEMENT_TYPE RT "
 					+ "ON R.RT_ID = RT.RT_ID "
-					+ "WHERE R.EMPLOYEE_ID = ? AND R.RS_ID = ?";
+					+ "WHERE R.EMPLOYEE_ID = ? AND R.RS_ID = ? "
+					+ "ORDER BY R_REQUESTED";
 
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setInt(++parameterIndex, employeeId);
@@ -197,7 +198,8 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 					+ "ON R.RS_ID = RS.RS_ID "
 					+ "INNER JOIN REIMBURSEMENT_TYPE RT "
 					+ "ON R.RT_ID = RT.RT_ID "
-					+ "WHERE R.EMPLOYEE_ID = ? AND (R.RS_ID = ? OR R.RS_ID = ?)";
+					+ "WHERE R.EMPLOYEE_ID = ? AND (R.RS_ID = ? OR R.RS_ID = ?) "
+					+ "ORDER BY R_REQUESTED";
 
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setInt(++parameterIndex, employeeId);
@@ -242,7 +244,8 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 					+ "ON R.RS_ID = RS.RS_ID "
 					+ "INNER JOIN REIMBURSEMENT_TYPE RT "
 					+ "ON R.RT_ID = RT.RT_ID "
-					+ "WHERE R.RS_ID = ?";
+					+ "WHERE R.RS_ID = ? "
+					+ "ORDER BY R_REQUESTED";
 
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setInt(++parameterIndex, 1);
@@ -285,7 +288,8 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 					+ "ON R.RS_ID = RS.RS_ID "
 					+ "INNER JOIN REIMBURSEMENT_TYPE RT "
 					+ "ON R.RT_ID = RT.RT_ID "
-					+ "WHERE R.RS_ID = ? OR R.RS_ID = ?";
+					+ "WHERE R.RS_ID = ? OR R.RS_ID = ? "
+					+ "ORDER BY R_REQUESTED";
 
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setInt(++parameterIndex, 2);
@@ -344,22 +348,21 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 		return null;
 	}
 
-	public static void main(String[] args) {
-		ReimbursementRepositoryJdbc repository = ReimbursementRepositoryJdbc.getInstance();
-		EmployeeRole er = new EmployeeRole(1, "EMPLOYEE");
-		Employee e = new Employee(100,"James","Kempf","jamesk4321","password1","example@gmail.com",er);
-		ReimbursementStatus rs = new ReimbursementStatus(1,"PENDING");
-		ReimbursementType rt = new ReimbursementType(1,"OTHER");
-		Reimbursement r = new Reimbursement(100,LocalDateTime.now(),null,10,"Sample",e,null,rs,rt);
-		//		logger.trace(repository.insert(r));
-		r.setAmount(100);
-		logger.trace(repository.update(r));
-		logger.trace(repository.select(100));
-		logger.trace(repository.selectPending(100));
-		logger.trace(repository.selectFinalized(100));
-		logger.trace(repository.selectAllPending());
-		logger.trace(repository.selectAllFinalized());
-		logger.trace(repository.selectTypes());
-
-	}
+//	public static void main(String[] args) {
+//		ReimbursementRepositoryJdbc repository = ReimbursementRepositoryJdbc.getInstance();
+//		EmployeeRole er = new EmployeeRole(1, "EMPLOYEE");
+//		Employee e = new Employee(100,"James","Kempf","jamesk4321","password1","example@gmail.com",er);
+//		ReimbursementStatus rs = new ReimbursementStatus(1,"PENDING");
+//		ReimbursementType rt = new ReimbursementType(1,"OTHER");
+//		Reimbursement r = new Reimbursement(100,LocalDateTime.now(),null,10,"Sample",e,null,rs,rt);
+//		//		logger.trace(repository.insert(r));
+//		r.setAmount(100);
+//		logger.trace(repository.update(r));
+//		logger.trace(repository.select(100));
+//		logger.trace(repository.selectPending(100));
+//		logger.trace(repository.selectFinalized(100));
+//		logger.trace(repository.selectAllPending());
+//		logger.trace(repository.selectAllFinalized());
+//		logger.trace(repository.selectTypes());
+//	}
 }
