@@ -25,7 +25,7 @@
             </div>
             <ul class="nav navbar-nav">
                 <li class="nav-item"><a href="update-employee.do"><strong>Update Information</strong></a></li>
-                <li class="nav-item"><a href="submit-reimbursement.do"><strong>Reimbursements</strong></a></li>
+                <li class="nav-item"><a href="select-multiple-reimbursements.do/?list=current"><strong>Reimbursements</strong></a></li>
                 <li class="nav-item"><a href="list-employees.do"><strong>List Employees</strong></a></li>
                 <li class="nav-item"><a href="register.do"><strong>Register Employee</strong></a></li>
             </ul>
@@ -34,24 +34,16 @@
             </div>
         </div>
     </nav>
-    <div class="col-md-10 col-md-offset-1">
+    <div class="col-md-4 col-md-offset-4">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3>Reimbursements</h3>
+                <h3>Information</h3>
             </div>
-            <table id="reimbursementTable" class="table">
-                <thead>
-                    <tr>
-                        <th>Requester</th>
-                        <th>Amount</th>
-                        <th>Description</th>
-                        <th>Status</th>
-                        <th>Approver</th>
-                        <th>Requested</th>
-                        <th>Resolved</th>
-                    </tr>
-                </thead>
-            </table>
+            <ul id="customerList" class="list-group">
+                <li id="name" class="list-group-item"></li>
+                <li id="username" class="list-group-item"></li>
+                <li id="email" class="list-group-item"></li>
+            </ul>
         </div>
     </div>
     <script src="js/home.js"></script>

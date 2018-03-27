@@ -65,7 +65,7 @@ public class RequestHelper {
 			return new ReimbursementControllerAlpha().submitRequest(request);
 		case "/ERS/select-reimbursement.do":
 			return new ReimbursementControllerAlpha().singleRequest(request);
-		case "/ERS/select-multiple-reimbursement.do":
+		case "/ERS/select-multiple-reimbursements.do":
 			return new ReimbursementControllerAlpha().multipleRequests(request);
 		case "/ERS/finalize.do":
 			return new ReimbursementControllerAlpha().finalizeRequest(request);

@@ -211,7 +211,7 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 				reimbursements.add(new Reimbursement(
 						result.getInt("R_ID"),
 						result.getTimestamp("R_REQUESTED").toLocalDateTime(),
-						null,
+						result.getTimestamp("R_RESOLVED").toLocalDateTime(),
 						result.getDouble("R_AMOUNT"),
 						result.getString("R_DESCRIPTION"),
 						EmployeeRepositoryJdbc.getInstance().select(result.getInt("EMPLOYEE_ID")),
@@ -298,7 +298,7 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 				reimbursements.add(new Reimbursement(
 						result.getInt("R_ID"),
 						result.getTimestamp("R_REQUESTED").toLocalDateTime(),
-						null,
+						result.getTimestamp("R_RESOLVED").toLocalDateTime(),
 						result.getDouble("R_AMOUNT"),
 						result.getString("R_DESCRIPTION"),
 						EmployeeRepositoryJdbc.getInstance().select(result.getInt("EMPLOYEE_ID")),

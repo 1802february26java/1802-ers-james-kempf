@@ -25,6 +25,11 @@ a {
 .panel-default .panel-heading {
     text-align: center;
 }
-#message {
-    
+.label-center {
+    display: block;
+    width: 50%;
+    margin: auto auto 10px;
+}
+.list-group-item {
+    text-align: center;
 }

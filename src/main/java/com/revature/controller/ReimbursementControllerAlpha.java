@@ -78,6 +78,10 @@ public class ReimbursementControllerAlpha implements ReimbursementController {
 		} else {
 			Set<Reimbursement> reimbursements = null;
 			switch (request.getParameter("list")) {
+			case "current":
+				reimbursements = reimbursementService.getUserPendingRequests(loggedEmployee);
+				reimbursements.addAll(reimbursementService.getUserFinalizedRequests(loggedEmployee));
+				break;
 			case "pending":
 				reimbursements = reimbursementService.getUserPendingRequests(loggedEmployee);
 				break;
