@@ -1,3 +1,5 @@
+"use strict";
+
 window.onload = () => {
 
     // Login Event Listener

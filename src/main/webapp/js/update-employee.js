@@ -1,3 +1,5 @@
+"use-strict";
+
 window.onload = () => {
     document.getElementById("usernameTitle").innerHTML = sessionStorage.getItem("employeeUsername");
 

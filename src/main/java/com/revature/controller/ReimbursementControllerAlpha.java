@@ -26,8 +26,10 @@ public class ReimbursementControllerAlpha implements ReimbursementController {
 		Employee loggedEmployee = (Employee) request.getSession().getAttribute("employee");
 		if (loggedEmployee == null) {
 			return "login.html";
+		} else if (loggedEmployee.getEmployeeRole().getId() == 2) {
+			return "403.html";
 		} else if (request.getMethod() == "GET") {
-			return  "submit-reimbursement.html";
+			return "submit-reimbursement.html";
 		} else {
 			logger.trace(loggedEmployee.toString());
 			Reimbursement reimbursement = new Reimbursement(
@@ -88,11 +90,17 @@ public class ReimbursementControllerAlpha implements ReimbursementController {
 			case "finalized":
 				reimbursements = reimbursementService.getUserFinalizedRequests(loggedEmployee);
 				break;
-			case "user":
+			case "userPending":
 				if (loggedEmployee.getEmployeeRole().getId() == 2) {
 					Employee employee = new Employee(Integer.parseInt(request.getParameter("id")));
+					logger.trace(employee.toString());
 					reimbursements = reimbursementService.getUserPendingRequests(employee);
-					reimbursements.addAll(reimbursementService.getUserFinalizedRequests(employee));
+				}
+				break;
+			case "userFinalized":
+				if (loggedEmployee.getEmployeeRole().getId() == 2) {
+					Employee employee = new Employee(Integer.parseInt(request.getParameter("id")));
+					reimbursements = reimbursementService.getUserFinalizedRequests(employee);
 				}
 				break;
 			case "allPending":

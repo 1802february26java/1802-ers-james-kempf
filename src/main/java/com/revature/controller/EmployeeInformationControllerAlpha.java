@@ -52,7 +52,7 @@ public class EmployeeInformationControllerAlpha implements EmployeeInformationCo
 		if (loggedEmployee == null) {
 			return "login.html";
 		} else if (request.getMethod() == "GET") {
-			return "update-employee.html";
+			return (loggedEmployee.getEmployeeRole().getId() == 2 ? "update-employee-manager.html" : "update-employee.html");
 		} else {
 			logger.trace(loggedEmployee.toString());
 			String firstName = request.getParameter("firstName");
