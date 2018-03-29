@@ -24,25 +24,25 @@ public class EmployeeInformationControllerAlpha implements EmployeeInformationCo
 		} else if (loggedEmployee.getEmployeeRole().getId() != 2) {
 			return "403.html";
 		} else if (request.getMethod() == "GET") {
-			return "register.html";
+			return "register-manager.html";
 		} else {
 			Employee employee = new Employee(
-					request.getParameter("firstname"),
-					request.getParameter("lastname"),
+					request.getParameter("firstName"),
+					request.getParameter("lastName"),
 					request.getParameter("username"),
 					request.getParameter("password"),
 					request.getParameter("email"),
-					new EmployeeRole(Integer.parseInt(request.getParameter("employeeRoleID")))
+					new EmployeeRole(Integer.parseInt(request.getParameter("role")))
 					);
 			if (!employeeService.isUsernameTaken(employee)) {
 				if (employeeService.createEmployee(employee)) {
-					return new ClientMessage("Registration successful");
+					return new ClientMessage("Registration successful", true);
 				}
 			} else {
-				return new ClientMessage("Username is already taken");
+				return new ClientMessage("Username is already taken", false);
 			}
 		}
-		return new ClientMessage("Registration failed");
+		return new ClientMessage("Registration failed", false);
 	}
 
 	@Override

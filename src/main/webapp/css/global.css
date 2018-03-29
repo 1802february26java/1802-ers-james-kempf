@@ -39,3 +39,6 @@ a {
 .toggle-shown {
     display: none;
 }
+.approve-button {
+    margin: auto 5px auto 5px;
+}

@@ -12,7 +12,7 @@ window.onload = () => {
         let email = document.getElementById("email").value;
 
         if (password !== repeatPassword) {
-            document.getElementById("updateMessage").innerHTML = '<span class="label label-danger label-center">Password Mismatch</span>';
+            document.getElementById("message").innerHTML = '<span class="label label-danger label-center">Password Mismatch</span>';
         } else {
              // AJAX Logic
             let xhr = new XMLHttpRequest();

@@ -25,7 +25,6 @@
             </div>
             <ul class="nav navbar-nav">
                 <li class="nav-item"><a href="update-employee.do"><strong>Update Information</strong></a></li>
-                <li class="nav-item"><a href="list-employees.do"><strong>List Employees</strong></a></li>
                 <li class="nav-item"><a href="register.do"><strong>Register Employee</strong></a></li>
             </ul>
             <div class="nav navbar-nav navbar-right">
@@ -70,16 +69,41 @@
             <table class="table">
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>Requester</th>
                         <th>Amount</th>
                         <th>Description</th>
                         <th>Status</th>
-                        <th>Approver</th>
+                        <th id="approver-header">Approver</th>
                         <th>Requested</th>
-                        <th>Resolved</th>
+                        <th id="resolved-header">Resolved</th>
+                        <th id="approve-button-header">Approve</th>
                     </tr>
                 </thead>
                 <tbody id="reimbursementTable"></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-10 col-md-offset-1">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>Employees</h3>
+                <div id="employeeSelector" class="toggle-shown">
+                    <input id="employeeId" placeholder="Employee ID" class="table-selector form-control"/>
+                    <button id="employeeSelectorButton" class="table-selector btn btn-success">Get</button>
+                </div>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Userame</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody id="employeeTable"></tbody>
             </table>
         </div>
     </div>
