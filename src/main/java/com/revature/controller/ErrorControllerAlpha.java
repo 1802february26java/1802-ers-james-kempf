@@ -12,10 +12,13 @@ public class ErrorControllerAlpha implements ErrorController {
 	public String showError(HttpServletRequest request) {
 		String uri = request.getRequestURI();
 		if (uri.endsWith("/404.do")) {
+			logger.trace("Shoing 404");
 			return "404.html";
 		} else if (uri.endsWith("/403.do")) {
+			logger.trace("Shoing 403");
 			return "403.html";
 		} else {
+			logger.trace("Shoing oops");
 			return "oops.html";
 		}
 	}

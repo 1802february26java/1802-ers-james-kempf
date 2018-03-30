@@ -1,16 +1,11 @@
 import static org.junit.Assert.assertEquals;
 
-import java.time.LocalDateTime;
-
 import org.junit.After;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.revature.model.Employee;
 import com.revature.model.EmployeeRole;
-import com.revature.model.Reimbursement;
-import com.revature.model.ReimbursementStatus;
-import com.revature.model.ReimbursementType;
 import com.revature.service.EmployeeService;
 import com.revature.service.EmployeeServiceAlpha;
 
@@ -19,6 +14,7 @@ public class EmployeeTests {
 	private static EmployeeService employeeService = EmployeeServiceAlpha.getInstance();
 	
 	private static Employee employee = new Employee(
+			88,
 			"Zelda",
 			"Zebra",
 			"zeldaz",
@@ -28,18 +24,6 @@ public class EmployeeTests {
 			);
 	
 	private static Employee databaseEmployee;
-	
-	private static Reimbursement reimbursement = new Reimbursement(
-			0,
-			LocalDateTime.now(),
-			null,
-			100,
-			"Lorem Ipsum",
-			employee,
-			null,
-			new ReimbursementStatus(1, "PENDING"),
-			new ReimbursementType(1, "OTHER")
-			);
 	
 	@BeforeClass
 	public static void registerUser() {

@@ -6,7 +6,6 @@ import java.util.Set;
 import org.apache.log4j.Logger;
 
 import com.revature.model.Employee;
-import com.revature.model.EmployeeRole;
 import com.revature.model.EmployeeToken;
 import com.revature.repository.EmployeeRepository;
 import com.revature.repository.EmployeeRepositoryJdbc;

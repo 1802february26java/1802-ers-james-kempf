@@ -89,6 +89,7 @@ function getReimbursements() {
                             reimbursement.requester.firstName + " " + reimbursement.requester.lastName,
                             "$" + reimbursement.amount,
                             reimbursement.description,
+                            reimbursement.type.type,
                             reimbursement.status.status,
                             reimbursement.requested.monthValue + "-" + reimbursement.requested.dayOfMonth + "-" + reimbursement.requested.year
                         ];
@@ -99,6 +100,7 @@ function getReimbursements() {
                             reimbursement.requester.firstName + " " + reimbursement.requester.lastName,
                             "$" + reimbursement.amount,
                             reimbursement.description,
+                            reimbursement.type.type,
                             reimbursement.status.status,
                             (reimbursement.approver ? reimbursement.approver.firstName + " " + reimbursement.approver.lastName : ""),
                             reimbursement.requested.monthValue + "-" + reimbursement.requested.dayOfMonth + "-" + reimbursement.requested.year,

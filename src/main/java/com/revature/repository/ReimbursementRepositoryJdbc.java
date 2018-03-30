@@ -5,14 +5,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
-import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
 
-import com.revature.model.Employee;
-import com.revature.model.EmployeeRole;
 import com.revature.model.Reimbursement;
 import com.revature.model.ReimbursementStatus;
 import com.revature.model.ReimbursementType;
@@ -347,22 +344,4 @@ public class ReimbursementRepositoryJdbc implements ReimbursementRepository {
 		}
 		return null;
 	}
-
-//	public static void main(String[] args) {
-//		ReimbursementRepositoryJdbc repository = ReimbursementRepositoryJdbc.getInstance();
-//		EmployeeRole er = new EmployeeRole(1, "EMPLOYEE");
-//		Employee e = new Employee(100,"James","Kempf","jamesk4321","password1","example@gmail.com",er);
-//		ReimbursementStatus rs = new ReimbursementStatus(1,"PENDING");
-//		ReimbursementType rt = new ReimbursementType(1,"OTHER");
-//		Reimbursement r = new Reimbursement(100,LocalDateTime.now(),null,10,"Sample",e,null,rs,rt);
-//		//		logger.trace(repository.insert(r));
-//		r.setAmount(100);
-//		logger.trace(repository.update(r));
-//		logger.trace(repository.select(100));
-//		logger.trace(repository.selectPending(100));
-//		logger.trace(repository.selectFinalized(100));
-//		logger.trace(repository.selectAllPending());
-//		logger.trace(repository.selectAllFinalized());
-//		logger.trace(repository.selectTypes());
-//	}
 }
