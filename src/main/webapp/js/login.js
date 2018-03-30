@@ -28,13 +28,10 @@ window.onload = () => {
 }
 
 function login(data) {
-    // If message is a member of the JSON, it was AUTHENTICATION FAILED
     if(data.message) {
         document.getElementById("message").innerHTML = `<span class="label label-danger label-center">${data.message}</span>`;
     }
     else {
-        // Using sessionStorage of JavaScript
-        console.log(data);
         sessionStorage.setItem("employeeId", data.id);
         sessionStorage.setItem("employeeFirstName", data.firstName);
         sessionStorage.setItem("employeeLastName", data.lastName);

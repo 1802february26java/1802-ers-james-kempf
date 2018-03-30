@@ -29,7 +29,6 @@ function submitReimbursement() {
     let description = document.getElementById("description").value;
     let typeSelect = document.getElementById("type");
     let type = typeSelect.options[typeSelect.selectedIndex].value;
-    console.log(type);
 
     // AJAX Logic
     let xhr = new XMLHttpRequest();

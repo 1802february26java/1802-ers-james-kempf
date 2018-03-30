@@ -35,7 +35,6 @@ function getEmployees() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             let data = JSON.parse(xhr.responseText);
             let informationTable = document.getElementById("employeeTable");
-            console.log(data);
             data.forEach((employee) => {
                 let rowData = [
                     employee.id,
@@ -110,7 +109,6 @@ function getReimbursements() {
                 });
             }
         };
-        console.log(`select-multiple-reimbursements.do?list=${list}`);
         xhr.open("POST", `select-multiple-reimbursements.do?list=${list}`);
         xhr.send();
     }

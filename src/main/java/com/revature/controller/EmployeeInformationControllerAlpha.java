@@ -26,6 +26,14 @@ public class EmployeeInformationControllerAlpha implements EmployeeInformationCo
 		} else if (request.getMethod() == "GET") {
 			return "register-manager.html";
 		} else {
+			if (request.getParameter("password") == "") {
+				return new ClientMessage("Invalid password", false);
+			}
+			try {
+				Integer.parseInt(request.getParameter("role"));
+			} catch (NumberFormatException e) {
+				return new ClientMessage("Please choose employee role", false);
+			}
 			Employee employee = new Employee(
 					request.getParameter("firstName"),
 					request.getParameter("lastName"),

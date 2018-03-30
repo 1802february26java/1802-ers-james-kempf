@@ -31,6 +31,16 @@ public class ReimbursementControllerAlpha implements ReimbursementController {
 		} else if (request.getMethod() == "GET") {
 			return "submit-reimbursement.html";
 		} else {
+			try {
+				Double.parseDouble(request.getParameter("amount"));
+			} catch (NumberFormatException e) {
+				return new ClientMessage("Invalid amount", false);
+			}
+			try {
+				Integer.parseInt(request.getParameter("type"));
+			} catch (NumberFormatException e) {
+				return new ClientMessage("Please select a type", false);
+			}
 			logger.trace(loggedEmployee.toString());
 			Reimbursement reimbursement = new Reimbursement(
 					0,

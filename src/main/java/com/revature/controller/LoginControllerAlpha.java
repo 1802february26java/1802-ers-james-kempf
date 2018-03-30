@@ -1,6 +1,7 @@
 package com.revature.controller;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
@@ -32,7 +33,9 @@ public class LoginControllerAlpha implements LoginController {
 
 	@Override
 	public String logout(HttpServletRequest request) {
-		request.getSession().invalidate();
+		HttpSession session = request.getSession(false);
+		session.invalidate();
+		session = null;
 		return "login.html";
 	}
 
